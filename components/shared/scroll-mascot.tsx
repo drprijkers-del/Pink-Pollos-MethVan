@@ -93,34 +93,35 @@ export function ScrollMascotParallax() {
 export function ScrollMascotPeek() {
   const { scrollYProgress } = useScroll();
 
-  const clipPath = useTransform(
-    scrollYProgress,
-    [0.1, 0.2],
-    ["inset(100% 0% 0% 50%)", "inset(0% 0% 0% 0%)"]
-  );
-  const opacity = useTransform(scrollYProgress, [0.08, 0.12, 0.88, 0.92], [0, 1, 1, 0]);
-  const x = useTransform(scrollYProgress, [0.1, 0.2], [40, 0]);
+  // Fade in at 5%, fully visible at 10%, start fading at 70%, gone at 80%
+  const opacity = useTransform(scrollYProgress, [0.05, 0.1, 0.7, 0.8], [0, 1, 1, 0]);
+
+  // Slide in from right
+  const x = useTransform(scrollYProgress, [0.05, 0.12], [80, 0]);
+
+  // Subtle rotation for personality
+  const rotate = useTransform(scrollYProgress, [0.05, 0.12], [10, 0]);
 
   return (
     <motion.div
-      className="fixed bottom-0 right-0 z-40 pointer-events-none select-none hidden lg:block"
-      style={{ opacity, x }}
+      className="fixed bottom-32 right-4 z-40 pointer-events-none select-none hidden lg:block"
+      style={{ opacity, x, rotate }}
     >
-      <motion.div style={{ clipPath }} className="relative">
-        {/* Ambient glow */}
-        <div className="absolute -inset-4 blur-2xl bg-gradient-to-tl from-pink-500/40 to-transparent rounded-full" />
+      <div className="relative">
+        {/* Subtle pink glow */}
+        <div className="absolute inset-0 blur-2xl bg-pink-500/20 scale-150 rounded-full" />
 
         <Image
           src="/images/mascot-chicken.png"
           alt=""
-          width={220}
-          height={220}
-          className="relative w-36 h-36 md:w-44 md:h-44 object-contain"
+          width={200}
+          height={200}
+          className="relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 object-contain"
           style={{
-            filter: "drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)) drop-shadow(0 0 30px rgba(236, 72, 153, 0.2))"
+            filter: "drop-shadow(0 10px 20px rgb(0 0 0 / 0.2)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.15))"
           }}
         />
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
