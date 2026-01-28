@@ -89,23 +89,42 @@ export function ScrollMascotParallax() {
   );
 }
 
-// Peek-in variant (like peeking from corner)
+// Peek-in variant - rotates in and out from screen edge
 export function ScrollMascotPeek() {
   const { scrollYProgress } = useScroll();
 
-  // Fade in at 5%, fully visible at 10%, start fading at 70%, gone at 80%
-  const opacity = useTransform(scrollYProgress, [0.05, 0.1, 0.7, 0.8], [0, 1, 1, 0]);
+  // Rotate and slide: in from 5-15%, visible 15-70%, out from 70-80%
+  // Entry: rotate from 45deg to 0deg, slide from 100px to 0
+  // Exit: reverse - rotate from 0deg to 45deg, slide from 0 to 100px
+  const x = useTransform(
+    scrollYProgress,
+    [0.05, 0.15, 0.70, 0.80],
+    [120, 0, 0, 120]
+  );
 
-  // Slide in from right
-  const x = useTransform(scrollYProgress, [0.05, 0.12], [80, 0]);
+  const rotate = useTransform(
+    scrollYProgress,
+    [0.05, 0.15, 0.70, 0.80],
+    [45, 0, 0, 45]
+  );
 
-  // Subtle rotation for personality
-  const rotate = useTransform(scrollYProgress, [0.05, 0.12], [10, 0]);
+  // Only use opacity for the very start/end to avoid sudden pop
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.04, 0.06, 0.78, 0.81],
+    [0, 1, 1, 0]
+  );
 
   return (
     <motion.div
-      className="fixed bottom-32 right-4 z-40 pointer-events-none select-none hidden lg:block"
-      style={{ opacity, x, rotate }}
+      className="fixed bottom-24 right-0 z-40 pointer-events-none select-none hidden lg:block"
+      style={{
+        opacity,
+        x,
+        rotate,
+        // Transform origin at right edge for natural rotation
+        transformOrigin: "right center"
+      }}
     >
       <div className="relative">
         {/* Subtle pink glow */}
@@ -116,7 +135,7 @@ export function ScrollMascotPeek() {
           alt=""
           width={200}
           height={200}
-          className="relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 object-contain mix-blend-multiply dark:mix-blend-screen"
+          className="relative w-36 h-36 md:w-44 md:h-44 xl:w-52 xl:h-52 object-contain"
           style={{
             filter: "drop-shadow(0 10px 20px rgb(0 0 0 / 0.2)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.15))"
           }}
