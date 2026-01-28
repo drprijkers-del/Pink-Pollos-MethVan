@@ -40,6 +40,18 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-stone-950">
       <GridBackground />
 
+      {/* Mobile logo watermark - subtle branding */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 lg:hidden pointer-events-none opacity-[0.04]">
+        <Image
+          src="/logo-mark.svg"
+          alt=""
+          width={400}
+          height={400}
+          className="w-80 h-80"
+          aria-hidden="true"
+        />
+      </div>
+
       <Container size="wide" className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 md:py-0">
           {/* Left: Content */}

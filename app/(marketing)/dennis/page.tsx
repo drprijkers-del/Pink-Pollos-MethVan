@@ -28,6 +28,11 @@ const dennisData = {
   ],
   experience: "8+",
   availability: "Direct",
+  crossLink: {
+    question: "Liever zelf bouwen?",
+    name: "Chris",
+    href: "/chris",
+  },
 };
 
 export default function DennisPage() {

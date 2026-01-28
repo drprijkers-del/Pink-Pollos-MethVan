@@ -64,9 +64,9 @@ export function FriendsGrid() {
           {/* Intro */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-12">
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
-              Niet iedereen mag meedoen. Onze vrienden zijn handgepickte specialisten
-              die we persoonlijk kennen en vertrouwen. Geen open netwerk, geen
-              LinkedIn-connecties. Alleen mensen die leveren.
+              Selectief. Persoonlijk. Bewezen. Dit zijn specialisten die we kennen
+              van eerdere projecten en zonder voorbehoud aanbevelen. Als wij niet
+              beschikbaar zijn, zorgen zij voor dezelfde kwaliteit.
             </p>
           </motion.div>
 

@@ -20,6 +20,11 @@ type ProfileSectionProps = {
   skills: Skill[];
   experience: string;
   availability?: string;
+  crossLink?: {
+    question: string;
+    name: string;
+    href: string;
+  };
 };
 
 const levelColors = {
@@ -37,6 +42,7 @@ export function ProfileSection({
   skills,
   experience,
   availability,
+  crossLink,
 }: ProfileSectionProps) {
   return (
     <section className="py-16 md:py-24 bg-stone-50 dark:bg-stone-900">
@@ -149,6 +155,37 @@ export function ProfileSection({
             </div>
           </motion.div>
         </motion.div>
+
+        {/* Cross-link to other profile */}
+        {crossLink && (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-16 pt-12 border-t border-stone-200 dark:border-stone-800"
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="text-stone-500 dark:text-stone-400">
+                {crossLink.question}
+              </p>
+              <a
+                href={crossLink.href}
+                className="group inline-flex items-center gap-2 text-pink-600 dark:text-pink-400 font-medium hover:text-pink-500 transition-colors"
+              >
+                <span>Ontmoet {crossLink.name}</span>
+                <svg
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+        )}
       </Container>
     </section>
   );

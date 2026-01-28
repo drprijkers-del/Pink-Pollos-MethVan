@@ -10,9 +10,9 @@ export default function VriendenPage() {
   return (
     <>
       <PageHero
-        badge="La Familia"
+        badge="Inner Circle"
         title="Vrienden van Pink Pollos"
-        subtitle="Als wij niet beschikbaar zijn, regelen we iemand die wél levert. Geen random freelancers, alleen mensen die we kennen en vertrouwen."
+        subtitle="Specialisten die we kennen, hebben samengewerkt met, en zonder twijfel aanbevelen. Geen open netwerk — alleen bewezen kwaliteit."
       />
       <FriendsGrid />
     </>

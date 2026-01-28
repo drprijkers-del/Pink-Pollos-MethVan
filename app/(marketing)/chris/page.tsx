@@ -28,6 +28,11 @@ const chrisData = {
   ],
   experience: "10+",
   availability: "Q2 2025",
+  crossLink: {
+    question: "Liever met een team werken?",
+    name: "Dennis",
+    href: "/dennis",
+  },
 };
 
 export default function ChrisPage() {
