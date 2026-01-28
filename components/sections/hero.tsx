@@ -22,24 +22,26 @@ export function Hero() {
             animate="visible"
             className="max-w-2xl"
           >
-            {/* Badge - more specific */}
+            {/* Badge */}
             <motion.div variants={fadeUp} className="mb-6">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-sm font-medium">
                 <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
-                100% Senior · Direct Inzetbaar
+                Senior Expertise
               </span>
             </motion.div>
 
-            {/* Headline - benefit focused */}
+            {/* Headline */}
             <motion.h1
               variants={fadeUp}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white leading-[1.1]"
             >
-              Wij doen niet aan{" "}
-              <br className="hidden sm:block" />
+              Wij bouwen.
+              <br />
+              Wij begeleiden.
+              <br />
               <span className="relative inline-block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">
-                  onboarding-theater.
+                  Wij leveren.
                 </span>
                 {/* Animated underline */}
                 <motion.div
@@ -51,7 +53,7 @@ export function Hero() {
               </span>
             </motion.h1>
 
-            {/* Subheadline - expanded value prop */}
+            {/* Subheadline */}
             <motion.p
               variants={fadeUp}
               className="mt-8 text-lg md:text-xl text-stone-300 max-w-xl leading-relaxed"
@@ -60,7 +62,7 @@ export function Hero() {
               De mensen die je krijgt, zijn de mensen die leveren.
             </motion.p>
 
-            {/* Trust indicators - improved contrast */}
+            {/* Trust indicators */}
             <motion.div
               variants={fadeUp}
               className="mt-10 flex flex-wrap items-center gap-6 text-sm text-stone-400"
@@ -85,7 +87,7 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* CTAs - clear hierarchy */}
+            {/* CTAs */}
             <motion.div
               variants={fadeUp}
               className="mt-10 flex flex-col sm:flex-row gap-4"
@@ -126,7 +128,7 @@ export function Hero() {
             </motion.p>
           </motion.div>
 
-          {/* Right: Logo Mark with enhanced glow */}
+          {/* Right: Logo Mark */}
           <motion.div
             className="hidden lg:flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -138,18 +140,8 @@ export function Hero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-              {/* Multi-layer glow effect */}
-              <div className="absolute inset-0 blur-3xl bg-pink-500/30 scale-125" />
-              <div className="absolute inset-0 blur-xl bg-pink-600/20 scale-110" />
-
-              {/* Decorative ring */}
-              <div className="absolute inset-0 scale-150">
-                <motion.div
-                  className="w-full h-full rounded-full border border-pink-500/10"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                />
-              </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 blur-3xl bg-pink-500/20 scale-110" />
 
               <Image
                 src="/logo-mark.svg"
@@ -167,7 +159,7 @@ export function Hero() {
       {/* Bottom gradient fade to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-stone-50 dark:from-stone-900 to-transparent pointer-events-none" />
 
-      {/* Scroll indicator - refined */}
+      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
         initial={{ opacity: 0, y: -10 }}
