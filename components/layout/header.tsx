@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -10,14 +10,29 @@ import { NAV_ITEMS } from "@/lib/constants";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-stone-950/90 backdrop-blur-md border-b border-stone-800/50"
+          : "bg-transparent"
+      }`}
+    >
       <Container>
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="hover:opacity-80 transition-opacity">
-            <Logo size="sm" showText={true} />
+            <Logo size="sm" showText={true} className="text-white" />
           </Link>
 
           {/* Desktop Nav */}
@@ -26,7 +41,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors"
+                className="text-sm text-stone-400 hover:text-white transition-colors"
               >
                 {item.label}
               </Link>
@@ -39,7 +54,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-stone-600 dark:text-stone-400"
+            className="md:hidden p-2 text-stone-400"
             aria-label="Toggle menu"
           >
             <svg
@@ -74,7 +89,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-stone-200 dark:border-stone-800"
+              className="md:hidden border-t border-stone-800 bg-stone-950/95 backdrop-blur-md"
             >
               <div className="py-4 space-y-4">
                 {NAV_ITEMS.map((item) => (
@@ -82,7 +97,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50"
+                    className="block text-stone-400 hover:text-white"
                   >
                     {item.label}
                   </Link>

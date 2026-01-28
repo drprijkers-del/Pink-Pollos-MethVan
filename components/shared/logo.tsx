@@ -70,7 +70,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
       </div>
 
       {showText && (
-        <span className="text-xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
+        <span className="text-xl font-semibold tracking-tight text-white">
           Pink Pollos
         </span>
       )}
