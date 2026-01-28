@@ -1,178 +1,197 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { GridBackground } from "@/components/shared/grid-background";
-import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const logoReveal = {
+    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.95 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.1,
+        delayChildren: shouldReduceMotion ? 0 : 0.2,
+      },
+    },
+  };
+
+  const transition = {
+    duration: shouldReduceMotion ? 0.01 : 0.6,
+    ease: [0.25, 0.46, 0.45, 0.94] as const,
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-stone-950">
-      {/* Grid background with all decorations */}
       <GridBackground />
 
       <Container size="wide" className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center py-20 md:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 md:py-0">
           {/* Left: Content */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="max-w-2xl"
+            className="max-w-xl"
           >
             {/* Badge */}
-            <motion.div variants={fadeUp} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-sm font-medium">
-                <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
+            <motion.div variants={fadeUp} transition={transition} className="mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 text-pink-400 text-sm font-medium tracking-wide">
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
                 Senior Expertise
               </span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline - Option C: Professional maar krachtig */}
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white leading-[1.1]"
+              transition={transition}
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white/95 leading-[1.1]"
             >
               Wij bouwen.
               <br />
               Wij begeleiden.
               <br />
-              <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">
-                  Wij leveren.
-                </span>
-                {/* Animated underline */}
-                <motion.div
-                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-500">
+                Wij leveren.
               </span>
             </motion.h1>
 
-            {/* Subheadline */}
+            {/* Subheadline - professioneler, minder edgy */}
             <motion.p
               variants={fadeUp}
-              className="mt-8 text-lg md:text-xl text-stone-300 max-w-xl leading-relaxed"
+              transition={transition}
+              className="mt-8 text-lg text-stone-300 leading-relaxed max-w-md"
             >
-              Senior developers en agile experts die je team versterken vanaf dag één.
-              De mensen die je krijgt, zijn de mensen die leveren.
+              Senior developers en agile experts die direct waarde toevoegen.
+              Geen lange inwerkperiodes, gewoon resultaat.
             </motion.p>
 
-            {/* Trust indicators */}
+            {/* Trust indicators - cleaner, minder "edgy" */}
             <motion.div
               variants={fadeUp}
-              className="mt-10 flex flex-wrap items-center gap-6 text-sm text-stone-400"
+              transition={transition}
+              className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3"
             >
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span>Geen juniors</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span>Geen overhead</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span>Geen excuses</span>
-              </div>
+              {["Ervaren seniors", "Direct inzetbaar", "Bewezen resultaat"].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-sm text-stone-400">
+                  <svg className="w-4 h-4 text-pink-500/80" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>{item}</span>
+                </div>
+              ))}
             </motion.div>
 
-            {/* CTAs */}
+            {/* CTAs - duidelijke hiërarchie */}
             <motion.div
               variants={fadeUp}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
+              transition={transition}
+              className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4"
             >
-              <Button href="/contact" variant="solid" size="large" className="group shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transition-shadow">
-                Plan een kennismaking
+              {/* Primary CTA - dominant */}
+              <Button
+                href="/contact"
+                variant="solid"
+                size="large"
+                className="group relative shadow-xl shadow-pink-500/20 hover:shadow-pink-500/30 transition-shadow"
+              >
+                <span>Plan een gesprek</span>
                 <svg
-                  className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
+                  className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Button>
+
+              {/* Secondary CTA - subtiel */}
               <button
                 onClick={() => document.getElementById("pillars")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-stone-400 hover:text-white transition-colors"
+                className="inline-flex items-center text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 <span>Bekijk onze aanpak</span>
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </motion.div>
-
-            {/* Social proof hint */}
-            <motion.p
-              variants={fadeUp}
-              className="mt-8 text-sm text-stone-500"
-            >
-              Trusted by tech teams at startups & scale-ups across NL
-            </motion.p>
           </motion.div>
 
-          {/* Right: Logo Mark */}
+          {/* Right: Logo als visueel anker */}
           <motion.div
             className="hidden lg:flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            variants={logoReveal}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: shouldReduceMotion ? 0.01 : 0.8,
+              delay: shouldReduceMotion ? 0 : 0.4,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
           >
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative"
-            >
-              {/* Glow effect */}
-              <div className="absolute inset-0 blur-3xl bg-pink-500/20 scale-110" />
+            <div className="relative">
+              {/* Subtle glow - niet te veel */}
+              <div className="absolute inset-0 blur-3xl bg-pink-500/15 scale-110 rounded-full" />
 
-              <Image
-                src="/logo-mark.svg"
-                alt="Pink Pollos"
-                width={400}
-                height={400}
-                className="relative w-72 h-72 xl:w-96 xl:h-96"
-                priority
-              />
-            </motion.div>
+              {/* Logo met subtiele float */}
+              <motion.div
+                animate={shouldReduceMotion ? {} : { y: [0, -8, 0] }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src="/logo-mark.svg"
+                  alt="Pink Pollos"
+                  width={380}
+                  height={380}
+                  className="relative w-64 h-64 xl:w-80 xl:h-80"
+                  priority
+                />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </Container>
 
-      {/* Bottom gradient fade to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-stone-50 dark:from-stone-900 to-transparent pointer-events-none" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-950 to-transparent pointer-events-none" />
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - minimal */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: shouldReduceMotion ? 0 : 1.5, duration: 0.5 }}
       >
         <motion.div
-          className="w-6 h-10 rounded-full border border-stone-700 flex items-start justify-center p-2"
-          whileHover={{ borderColor: "rgb(236 72 153 / 0.5)" }}
+          className="w-5 h-8 rounded-full border border-stone-700/50 flex items-start justify-center p-1.5"
+          animate={shouldReduceMotion ? {} : { borderColor: ["rgb(68 64 60 / 0.5)", "rgb(236 72 153 / 0.3)", "rgb(68 64 60 / 0.5)"] }}
+          transition={{ duration: 3, repeat: Infinity }}
         >
           <motion.div
-            className="w-1 h-2 bg-pink-500 rounded-full"
-            animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
+            className="w-1 h-1.5 bg-stone-500 rounded-full"
+            animate={shouldReduceMotion ? {} : { y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
