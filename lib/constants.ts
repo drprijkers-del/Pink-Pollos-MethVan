@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: "Pink Pollos",
   description:
-    "Senior developers en agile experts. Direct inzetbaar, zonder onboarding-theater.",
+    "Wij doen niet aan onboarding-theater. Senior developers en agile experts die je team versterken vanaf dag één.",
   url: "https://pinkpollos.com",
   email: "hello@pinkpollos.com",
 } as const;

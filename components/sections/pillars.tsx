@@ -74,16 +74,16 @@ export function Pillars() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Section header */}
+          {/* Section header - narrative flow from hero */}
           <motion.div variants={fadeUp} className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 text-sm font-medium mb-4">
-              Onze aanpak
+              Zo werken wij
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
-              Drie pijlers, één filosofie
+              Drie manieren om te leveren
             </h2>
             <p className="mt-4 text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
-              We werken alleen met de beste ingrediënten.
+              Direct met ons. Via ons netwerk. Of met tools die we zelf bouwen.
             </p>
           </motion.div>
 
