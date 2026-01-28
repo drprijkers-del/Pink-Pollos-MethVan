@@ -116,7 +116,7 @@ export function ScrollMascotPeek() {
           alt=""
           width={200}
           height={200}
-          className="relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 object-contain"
+          className="relative w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 object-contain mix-blend-multiply dark:mix-blend-screen"
           style={{
             filter: "drop-shadow(0 10px 20px rgb(0 0 0 / 0.2)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.15))"
           }}
