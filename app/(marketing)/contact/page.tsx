@@ -1,30 +1,20 @@
-import { Container } from "@/components/ui/container";
-import { SITE_CONFIG } from "@/lib/constants";
+import { PageHero } from "@/components/sections/page-hero";
+import { ContactSection } from "@/components/sections/contact-form";
 
 export const metadata = {
   title: "Contact",
-  description: "Neem contact op met Pink Pollos.",
+  description: "Neem contact op met Pink Pollos. Geen sales calls, gewoon een eerlijk gesprek.",
 };
 
 export default function ContactPage() {
   return (
-    <section className="pt-32 pb-24 md:pt-40 md:pb-32">
-      <Container size="narrow">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
-          Klaar om te praten?
-        </h1>
-        <p className="mt-6 text-lg text-stone-600 dark:text-stone-400">
-          Geen sales calls. Geen decks. Gewoon een eerlijk gesprek.
-        </p>
-        <div className="mt-10">
-          <a
-            href={`mailto:${SITE_CONFIG.email}`}
-            className="text-lg text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors"
-          >
-            {SITE_CONFIG.email} &rarr;
-          </a>
-        </div>
-      </Container>
-    </section>
+    <>
+      <PageHero
+        badge="Let's Talk"
+        title="Klaar om te praten?"
+        subtitle="Geen sales calls. Geen decks. Gewoon een eerlijk gesprek over wat je nodig hebt en of wij de juiste fit zijn."
+      />
+      <ContactSection />
+    </>
   );
 }

@@ -1,21 +1,20 @@
-import { Container } from "@/components/ui/container";
+import { PageHero } from "@/components/sections/page-hero";
+import { LabGrid } from "@/components/sections/lab-grid";
 
 export const metadata = {
   title: "Het Lab",
-  description: "Eigen tools, producten en experimenten van Pink Pollos.",
+  description: "Eigen tools, producten en experimenten van Pink Pollos. Van POC tot productie.",
 };
 
 export default function LabPage() {
   return (
-    <section className="pt-32 pb-24 md:pt-40 md:pb-32">
-      <Container size="narrow">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
-          Het Lab
-        </h1>
-        <p className="mt-6 text-lg text-stone-600 dark:text-stone-400">
-          Waar we experimenteren. Eigen tools, producten en side projects.
-        </p>
-      </Container>
-    </section>
+    <>
+      <PageHero
+        badge="R&D"
+        title="Het Lab"
+        subtitle="Waar we experimenteren. Eigen tools, producten en side projects. Soms voor klanten, soms voor onszelf. Altijd met dezelfde standaard."
+      />
+      <LabGrid />
+    </>
   );
 }
