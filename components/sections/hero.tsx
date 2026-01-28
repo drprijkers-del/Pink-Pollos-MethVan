@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { GridBackground } from "@/components/shared/grid-background";
-import { GeometricChicken } from "@/components/shared/geometric-chicken";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function Hero() {
@@ -129,10 +129,30 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right: Geometric Chicken Monument */}
-          <div className="hidden lg:flex items-center justify-center">
-            <GeometricChicken className="w-80 h-auto xl:w-96" />
-          </div>
+          {/* Right: Logo Mark */}
+          <motion.div
+            className="hidden lg:flex items-center justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative"
+            >
+              {/* Glow effect behind logo */}
+              <div className="absolute inset-0 blur-3xl bg-pink-500/20 scale-110" />
+              <Image
+                src="/logo-mark.svg"
+                alt="Pink Pollos"
+                width={400}
+                height={400}
+                className="relative w-72 h-72 xl:w-96 xl:h-96"
+                priority
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </Container>
 
