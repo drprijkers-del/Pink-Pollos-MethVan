@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/shared/logo";
 import { NAV_ITEMS } from "@/lib/constants";
 
 export function Header() {
@@ -15,11 +16,8 @@ export function Header() {
       <Container>
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-xl font-semibold tracking-tight text-stone-900 dark:text-stone-50 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
-          >
-            Pink Pollos
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Logo size="sm" showText={true} />
           </Link>
 
           {/* Desktop Nav */}
@@ -33,7 +31,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button href="/contact" variant="ghost" size="default">
+            <Button href="/contact" variant="solid" size="default">
               Contact
             </Button>
           </div>

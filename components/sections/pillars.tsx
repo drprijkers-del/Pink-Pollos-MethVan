@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { GradientOrb, DotPattern } from "@/components/shared/decorative";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { PILLARS } from "@/lib/constants";
 
@@ -54,10 +55,19 @@ const pillarIcons = {
   ),
 };
 
+const pillarNumbers = ["01", "02", "03"];
+
 export function Pillars() {
   return (
-    <section id="pillars" className="py-24 md:py-32 scroll-mt-20">
-      <Container>
+    <section id="pillars" className="relative py-24 md:py-32 scroll-mt-20 overflow-hidden">
+      {/* Background decoration */}
+      <DotPattern className="text-pink-600" />
+      <GradientOrb
+        color="pink"
+        className="w-96 h-96 -bottom-48 -left-48 opacity-50"
+      />
+
+      <Container className="relative">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -66,7 +76,10 @@ export function Pillars() {
         >
           {/* Section header */}
           <motion.div variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 text-sm font-medium mb-4">
+              Onze aanpak
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
               Drie pijlers, één filosofie
             </h2>
             <p className="mt-4 text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
@@ -76,29 +89,56 @@ export function Pillars() {
 
           {/* Pillar cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {PILLARS.map((pillar) => (
+            {PILLARS.map((pillar, index) => (
               <motion.div
                 key={pillar.id}
                 variants={fadeUp}
-                className="group relative rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-8 transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/5"
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                className="group relative"
               >
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-pink-50 dark:bg-pink-950/50 flex items-center justify-center text-pink-600 dark:text-pink-400 mb-6 group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50 transition-colors">
-                  {pillarIcons[pillar.id as keyof typeof pillarIcons]}
+                {/* Card */}
+                <div className="relative h-full rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-8 transition-all duration-300 hover:border-pink-500/50 hover:shadow-xl hover:shadow-pink-500/10 overflow-hidden">
+                  {/* Background number */}
+                  <span className="absolute -right-4 -top-6 text-[120px] font-bold text-stone-100 dark:text-stone-800/50 select-none pointer-events-none leading-none">
+                    {pillarNumbers[index]}
+                  </span>
+
+                  {/* Content */}
+                  <div className="relative">
+                    {/* Icon */}
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-pink-500/25 group-hover:shadow-pink-500/40 transition-shadow">
+                      {pillarIcons[pillar.id as keyof typeof pillarIcons]}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-50 mb-3">
+                      {pillar.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
+                      {pillar.description}
+                    </p>
+
+                    {/* Link */}
+                    <Button href={pillar.link.href} variant="link">
+                      {pillar.link.label}
+                      <svg
+                        className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Button>
+                  </div>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-50 mb-3">
-                  {pillar.title}
-                </h3>
-                <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
-                  {pillar.description}
-                </p>
-
-                {/* Link */}
-                <Button href={pillar.link.href} variant="link">
-                  {pillar.link.label} &rarr;
-                </Button>
               </motion.div>
             ))}
           </div>
