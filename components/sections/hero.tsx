@@ -72,14 +72,14 @@ export function Hero() {
               </span>
             </motion.h1>
 
-            {/* Subheadline - professioneler, minder edgy */}
+            {/* Subheadline - benefit-focused, professioneel */}
             <motion.p
               variants={fadeUp}
               transition={transition}
-              className="mt-8 text-lg text-stone-300 leading-relaxed max-w-md"
+              className="mt-8 text-lg text-stone-300/90 leading-relaxed max-w-lg"
             >
-              Senior developers en agile experts die direct waarde toevoegen.
-              Geen lange inwerkperiodes, gewoon resultaat.
+              Senior developers en agile experts die direct waarde leveren aan je team.
+              Geen inwerktrajecten, geen ruis — gewoon resultaat vanaf dag één.
             </motion.p>
 
             {/* Trust indicators - cleaner, minder "edgy" */}
@@ -163,9 +163,9 @@ export function Hero() {
                 <Image
                   src="/logo-mark.svg"
                   alt="Pink Pollos"
-                  width={380}
-                  height={380}
-                  className="relative w-64 h-64 xl:w-80 xl:h-80"
+                  width={400}
+                  height={400}
+                  className="relative w-64 h-64 lg:w-72 lg:h-72 xl:w-96 xl:h-96"
                   priority
                 />
               </motion.div>
