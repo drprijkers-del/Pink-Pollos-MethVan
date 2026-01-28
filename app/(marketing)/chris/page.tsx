@@ -10,6 +10,7 @@ const chrisData = {
   name: "Chris",
   role: "Senior Full-stack Developer",
   alias: "The Architect",
+  tagline: "One Man Army",
   bio: [
     "Meer dan 10 jaar ervaring in het bouwen van schaalbare applicaties. Van startup MVP tot enterprise platform — Chris heeft het gebouwd.",
     "Specialiteit: complexe problemen reduceren tot elegante oplossingen. Geen overengineering, geen shortcuts. Code die werkt, leesbaar is, en blijft werken.",

@@ -15,6 +15,7 @@ type ProfileSectionProps = {
   name: string;
   role: string;
   alias?: string;
+  tagline?: string;
   bio: string[];
   skills: Skill[];
   experience: string;
@@ -31,6 +32,7 @@ export function ProfileSection({
   name,
   role,
   alias,
+  tagline,
   bio,
   skills,
   experience,
@@ -53,9 +55,17 @@ export function ProfileSection({
                 a.k.a. "{alias}"
               </p>
             )}
-            <h2 className="text-3xl md:text-4xl font-semibold text-stone-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-stone-900 dark:text-white mb-2">
               {name}
             </h2>
+
+            {/* Tagline - stylized quote */}
+            {tagline && (
+              <p className="text-xl md:text-2xl font-light italic text-stone-400 dark:text-stone-500 mb-6">
+                "{tagline}"
+              </p>
+            )}
+
             <p className="text-lg text-pink-600 dark:text-pink-400 font-medium mb-6">
               {role}
             </p>
