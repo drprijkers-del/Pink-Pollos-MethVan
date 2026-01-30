@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   description:
     "Wij doen niet aan onboarding-theater. Senior developers en agile experts die je team versterken vanaf dag één.",
   url: "https://pinkpollos.com",
-  email: "hello@pinkpollos.com",
+  email: "info@pinkpollos.com",
 } as const;
 
 export const NAV_ITEMS = [
