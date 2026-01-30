@@ -12,7 +12,7 @@ export default function VriendenPage() {
       <PageHero
         badge="Inner Circle"
         title="Vrienden van Pink Pollos"
-        subtitle="Specialisten die we kennen, hebben samengewerkt met, en zonder twijfel aanbevelen. Geen open netwerk — alleen bewezen kwaliteit."
+        subtitle="Specialisten die we kennen, hebben samengewerkt met, en zonder twijfel aanbevelen. Geen open netwerk, alleen bewezen kwaliteit."
       />
       <FriendsGrid />
     </>

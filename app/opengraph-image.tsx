@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Pink Pollos - Senior Consultants, Geen Overhead";
+export const alt = "Pink Pollos — Senior Consultants, Geen Overhead";
 export const size = {
   width: 1200,
   height: 630,

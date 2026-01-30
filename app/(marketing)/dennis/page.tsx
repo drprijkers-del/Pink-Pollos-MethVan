@@ -9,10 +9,10 @@ export const metadata = {
 const dennisData = {
   name: "Dennis",
   role: "Agile Coach & Team Manager",
-  alias: "The Catalyst",
+  alias: "Mr White",
   tagline: "I am the one who knocks",
   bio: [
-    "Teams die vastlopen, processen die niet werken, organisaties die worstelen met verandering — Dennis lost het op. Niet met frameworks en certifications, maar met gezond verstand.",
+    "Teams die vastlopen, processen die niet werken, organisaties die worstelen met verandering. Dennis lost het op. Niet met frameworks en certifications, maar met gezond verstand.",
     "8+ jaar ervaring in het begeleiden van development teams. Van chaotische startups tot logge enterprises. De aanpak verschilt, het resultaat niet: teams die leveren.",
     "Geen Scrum-politie, geen Agile-theater. Wel: heldere communicatie, focus op resultaat, en de moed om te zeggen wat niemand wil horen.",
   ],

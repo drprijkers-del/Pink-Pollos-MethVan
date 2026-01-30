@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { LogoWatermark, LogoCorner, AccentLine } from "@/components/shared/logo-fragments";
+import { LogoCorner, AccentLine } from "@/components/shared/logo-fragments";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 type PageHeroProps = {
@@ -18,8 +19,17 @@ export function PageHero({ title, subtitle, badge, children }: PageHeroProps) {
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950 to-stone-900" />
 
-      {/* Logo watermark - very subtle */}
-      <LogoWatermark className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] text-pink-500" />
+      {/* Logo watermark - subtle branding */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none opacity-[0.04]">
+        <Image
+          src="/logo-mark.svg"
+          alt=""
+          width={600}
+          height={600}
+          className="w-125 h-125 lg:w-150 lg:h-150"
+          aria-hidden="true"
+        />
+      </div>
 
       {/* Corner accents */}
       <LogoCorner position="top-left" className="absolute top-8 left-8 w-24 h-24 text-pink-500" />
