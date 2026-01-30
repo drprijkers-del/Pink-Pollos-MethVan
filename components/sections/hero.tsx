@@ -92,8 +92,7 @@ export function Hero() {
               transition={transition}
               className="mt-8 text-lg text-stone-300/90 leading-relaxed max-w-lg"
             >
-              Senior developers en agile experts die direct waarde leveren aan je team.
-              Geen inwerktrajecten, geen ruis. Gewoon resultaat vanaf dag één.
+              {t("subheadline")}
             </motion.p>
 
             {/* Trust indicators - cleaner, minder "edgy" */}
