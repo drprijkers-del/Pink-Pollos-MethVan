@@ -2,10 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export function ScrollMascot() {
-  const [isVisible, setIsVisible] = useState(false);
   const { scrollYProgress } = useScroll();
 
   // Transform scroll progress to mascot position
@@ -13,14 +11,6 @@ export function ScrollMascot() {
   const opacity = useTransform(scrollYProgress, [0.1, 0.15, 0.85, 0.9], [0, 1, 1, 0]);
   const x = useTransform(scrollYProgress, [0.1, 0.18], [100, 0]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.18], [15, 0]);
-
-  // Track if we should show (only after first scroll threshold)
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
-      setIsVisible(latest > 0.1);
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
 
   return (
     <motion.div

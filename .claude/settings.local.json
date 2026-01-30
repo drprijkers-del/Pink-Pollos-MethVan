@@ -14,7 +14,8 @@
       "Bash(dir:*)",
       "Bash(npm ls:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npm run lint)"
     ]
   }
 }

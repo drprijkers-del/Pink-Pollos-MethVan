@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { CornerAccent } from "@/components/shared/logo-fragments";
 import { FAQJsonLd } from "@/components/shared/json-ld";
@@ -120,12 +121,12 @@ export function FAQ() {
           {/* CTA */}
           <p className="text-center mt-8 text-stone-600 dark:text-stone-400">
             {t("moreQuestions")}{" "}
-            <a
+            <Link
               href="/contact"
               className="text-pink-600 dark:text-pink-400 hover:underline font-medium"
             >
               {t("contactUs")}
-            </a>
+            </Link>
           </p>
         </div>
       </Container>

@@ -10,21 +10,20 @@ const COOKIE_CONSENT_KEY = "cookie-consent";
 type ConsentValue = "granted" | "denied" | null;
 
 export function CookieBanner() {
-  const [consent, setConsent] = useState<ConsentValue>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (stored === "granted" || stored === "denied") {
-      setConsent(stored);
-    } else {
-      setIsVisible(true);
-    }
+    // Use requestAnimationFrame to avoid synchronous setState warning
+    requestAnimationFrame(() => {
+      const stored = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (stored !== "granted" && stored !== "denied") {
+        setIsVisible(true);
+      }
+    });
   }, []);
 
   const handleConsent = (value: "granted" | "denied") => {
     localStorage.setItem(COOKIE_CONSENT_KEY, value);
-    setConsent(value);
     setIsVisible(false);
 
     // Dispatch custom event for analytics providers to listen to
@@ -89,10 +88,16 @@ export function useCookieConsent() {
   const [consent, setConsent] = useState<ConsentValue>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (stored === "granted" || stored === "denied") {
-      setConsent(stored);
-    }
+    // Read initial value from localStorage
+    const readConsent = () => {
+      const stored = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (stored === "granted" || stored === "denied") {
+        setConsent(stored);
+      }
+    };
+
+    // Use requestAnimationFrame to avoid synchronous setState warning
+    requestAnimationFrame(readConsent);
 
     const handleConsentChange = (e: CustomEvent<{ consent: ConsentValue }>) => {
       setConsent(e.detail.consent);
