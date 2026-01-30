@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { CornerAccent } from "@/components/shared/logo-fragments";
@@ -44,6 +46,8 @@ export function ProfileSection({
   availability,
   crossLink,
 }: ProfileSectionProps) {
+  const t = useTranslations("profiles");
+
   return (
     <section className="py-16 md:py-24 bg-stone-50 dark:bg-stone-900">
       <Container>
@@ -58,7 +62,7 @@ export function ProfileSection({
           <motion.div variants={fadeUp}>
             {alias && (
               <p className="text-pink-500 text-sm font-medium uppercase tracking-wider mb-2">
-                a.k.a. "{alias}"
+                a.k.a. &quot;{alias}&quot;
               </p>
             )}
             <h2 className="text-3xl md:text-4xl font-semibold text-stone-900 dark:text-white mb-2">
@@ -68,7 +72,7 @@ export function ProfileSection({
             {/* Tagline - stylized quote */}
             {tagline && (
               <p className="text-xl md:text-2xl font-light italic text-stone-400 dark:text-stone-500 mb-6">
-                "{tagline}"
+                &quot;{tagline}&quot;
               </p>
             )}
 
@@ -93,7 +97,7 @@ export function ProfileSection({
                   {experience}
                 </span>
                 <p className="text-sm text-stone-500 uppercase tracking-wider">
-                  jaar ervaring
+                  {t("yearsExperience")}
                 </p>
               </div>
               {availability && (
@@ -102,7 +106,7 @@ export function ProfileSection({
                     {availability}
                   </span>
                   <p className="text-sm text-stone-500 uppercase tracking-wider">
-                    beschikbaar
+                    {t("available")}
                   </p>
                 </div>
               )}
@@ -110,7 +114,7 @@ export function ProfileSection({
 
             <div className="mt-8">
               <Button href="/contact" variant="solid">
-                Neem contact op
+                {t("contactButton")}
               </Button>
             </div>
           </motion.div>
@@ -121,7 +125,7 @@ export function ProfileSection({
               <CornerAccent position="top-right" />
 
               <h3 className="text-lg font-semibold text-stone-900 dark:text-white mb-6">
-                Skills & Expertise
+                {t("skillsTitle")}
               </h3>
 
               <div className="space-y-4">
@@ -169,11 +173,11 @@ export function ProfileSection({
               <p className="text-stone-500 dark:text-stone-400">
                 {crossLink.question}
               </p>
-              <a
+              <Link
                 href={crossLink.href}
                 className="group inline-flex items-center gap-2 text-pink-600 dark:text-pink-400 font-medium hover:text-pink-500 transition-colors"
               >
-                <span>Ontmoet {crossLink.name}</span>
+                <span>{t("meetPerson", { name: crossLink.name })}</span>
                 <svg
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
                   fill="none"
@@ -182,7 +186,7 @@ export function ProfileSection({
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

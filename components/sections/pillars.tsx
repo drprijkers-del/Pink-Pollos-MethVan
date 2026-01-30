@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { GradientOrb, DotPattern } from "@/components/shared/decorative";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import { PILLARS } from "@/lib/constants";
 
 const pillarIcons = {
   "de-zaak": (
@@ -57,7 +57,15 @@ const pillarIcons = {
 
 const pillarNumbers = ["01", "02", "03"];
 
+const pillarsConfig = [
+  { id: "de-zaak", key: "deZaak", href: "/chris" },
+  { id: "vrienden", key: "friends", href: "/vrienden" },
+  { id: "lab", key: "lab", href: "/lab" },
+];
+
 export function Pillars() {
+  const t = useTranslations("pillars");
+
   return (
     <section id="pillars" className="relative py-24 md:py-32 scroll-mt-20 overflow-hidden">
       {/* Background decoration */}
@@ -77,19 +85,19 @@ export function Pillars() {
           {/* Section header - narrative flow from hero */}
           <motion.div variants={fadeUp} className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 text-sm font-medium mb-4">
-              Zo werken wij
+              {t("sectionBadge")}
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
-              Drie manieren om te leveren
+              {t("sectionTitle")}
             </h2>
             <p className="mt-4 text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
-              Direct met ons. Via ons netwerk. Of met tools die we zelf bouwen.
+              {t("sectionSubtitle")}
             </p>
           </motion.div>
 
           {/* Pillar cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {PILLARS.map((pillar, index) => (
+            {pillarsConfig.map((pillar, index) => (
               <motion.div
                 key={pillar.id}
                 variants={fadeUp}
@@ -112,17 +120,17 @@ export function Pillars() {
 
                     {/* Title */}
                     <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-50 mb-3">
-                      {pillar.title}
+                      {t(`${pillar.key}.title`)}
                     </h3>
 
                     {/* Description */}
                     <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
-                      {pillar.description}
+                      {t(`${pillar.key}.description`)}
                     </p>
 
                     {/* Link */}
-                    <Button href={pillar.link.href} variant="link">
-                      {pillar.link.label}
+                    <Button href={pillar.href} variant="link">
+                      {t(`${pillar.key}.linkLabel`)}
                       <svg
                         className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1"
                         fill="none"

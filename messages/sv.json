@@ -1,0 +1,280 @@
+{
+  "site": {
+    "name": "Pink Pollos",
+    "description": "Ingen onboarding-teater. Senior utvecklare och agila experter som stärker ditt team från dag ett."
+  },
+  "nav": {
+    "deZaak": "Verksamheten",
+    "chris": "Chris",
+    "dennis": "Dennis",
+    "friends": "Vänner",
+    "lab": "Labbet",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Senior Expertis",
+    "headline1": "Vi bygger.",
+    "headline2": "Vi guidar.",
+    "headline3": "Vi levererar.",
+    "subheadline": "Senior utvecklare och agila experter som levererar värde till ditt team från dag ett. Ingen onboarding-krångel, inget brus — bara resultat.",
+    "trustPoints": {
+      "seniors": "Erfarna seniorer",
+      "available": "Redo att starta",
+      "proven": "Bevisade resultat"
+    },
+    "cta": {
+      "primary": "Boka ett samtal",
+      "secondary": "Se vårt arbetssätt"
+    }
+  },
+  "pillars": {
+    "sectionBadge": "Så jobbar vi",
+    "sectionTitle": "Tre sätt att leverera",
+    "sectionSubtitle": "Direkt med oss. Via vårt nätverk. Eller med verktyg vi bygger själva.",
+    "deZaak": {
+      "title": "Redo att starta",
+      "description": "Chris och Dennis. Två seniorer som levererar utan övervakning. Full-stack utveckling. Agil transformation. Ingen byrå-overhead.",
+      "linkLabel": "Lär känna oss"
+    },
+    "friends": {
+      "title": "Den inre cirkeln",
+      "description": "Inte alla kommer in. Våra vänner är handplockade specialister med bevisad erfarenhet. När vi inte är tillgängliga levererar de samma kvalitet.",
+      "linkLabel": "Möt familjen"
+    },
+    "lab": {
+      "title": "Där vi experimenterar",
+      "description": "Egna verktyg, produkter och sidoprojekt. Från POC till produktion. Ibland för kunder, ibland för oss själva.",
+      "linkLabel": "Se labbet"
+    }
+  },
+  "proof": {
+    "sectionTitle": "Kvalitet är ingen slump",
+    "noJuniors": {
+      "title": "Inga juniorer",
+      "description": "Varje konsult har minst 8 års erfarenhet. Punkt."
+    },
+    "noSurprises": {
+      "title": "Inga överraskningar",
+      "description": "Fasta priser, tydlig kommunikation, noll skitsnack."
+    },
+    "noDrama": {
+      "title": "Inget drama",
+      "description": "Vi integreras i ditt team som om vi alltid funnits där."
+    },
+    "quote": "Vi är ingen byrå. Vi är bara riktigt bra människor som råkar vara riktigt bra på vad de gör."
+  },
+  "cta": {
+    "title": "Redo att prata?",
+    "description": "Inga säljsamtal. Inga presentationer. Bara ett ärligt samtal om vad du behöver och om vi passar ihop.",
+    "primaryButton": "Kontakta oss",
+    "secondaryButton": "Eller maila direkt"
+  },
+  "contact": {
+    "badge": "Let's Talk",
+    "pageTitle": "Redo att prata?",
+    "pageSubtitle": "Inga säljsamtal. Inga presentationer. Bara ett ärligt samtal om vad du behöver och om vi passar ihop.",
+    "pageDescription": "Kontakta Pink Pollos. Inga säljsamtal, bara ett ärligt samtal.",
+    "formTitle": "Direkt kontakt",
+    "formDescription": "Inget kontaktformulär som försvinner i ett svart hål. Skicka ett mejl så hör du från oss inom 24 timmar. Föredrar du att ringa? Lämna ditt nummer.",
+    "labels": {
+      "name": "Namn",
+      "email": "E-post",
+      "message": "Meddelande"
+    },
+    "placeholders": {
+      "name": "Ditt namn",
+      "email": "du@email.com",
+      "message": "Hur kan vi hjälpa dig?"
+    },
+    "submit": "Skicka meddelande",
+    "submitting": "Skickar...",
+    "success": {
+      "title": "Meddelande skickat!",
+      "description": "Vi återkommer så snart som möjligt.",
+      "newMessage": "Skicka ett nytt meddelande"
+    },
+    "error": "Något gick fel",
+    "responseTime": "Inom 24 timmar",
+    "linkedInQuestion": "Föredrar LinkedIn?",
+    "orMailDirectly": "Eller maila direkt till"
+  },
+  "footer": {
+    "tagline": "Senior expertis, snyggt paketerad. Utveckling och agil konsulting utan skitsnack.",
+    "navigation": "Navigation",
+    "contact": "Kontakt",
+    "meetUs": "Boka ett möte",
+    "copyright": "Kvalitet är ingen slump."
+  },
+  "profiles": {
+    "yearsExperience": "års erfarenhet",
+    "available": "tillgänglig",
+    "skillsTitle": "Kompetenser & Expertis",
+    "contactButton": "Kontakta oss",
+    "meetPerson": "Möt {name}",
+    "chris": {
+      "role": "Senior Full-stack Utvecklare",
+      "alias": "The Architect",
+      "tagline": "One Man Army",
+      "badge": "Full-stack Utveckling",
+      "pageDescription": "Senior Full-stack Utvecklare hos Pink Pollos. Bygger system som fungerar.",
+      "subtitle": "Bygger system som fungerar. Inga ursäkter, inget drama. Bara kod som gör vad den ska.",
+      "bio": [
+        "Över 10 års erfarenhet av att bygga skalbara applikationer. Från startup-MVP till enterprise-plattform — Chris har byggt det.",
+        "Specialitet: reducera komplexa problem till eleganta lösningar. Ingen överkonstruktion, inga genvägar. Kod som fungerar, är läsbar och fortsätter fungera.",
+        "Pragmatisk, direkt och allergisk mot skitsnack. Om något inte går, hör du det direkt. Om det går, är det klart imorgon."
+      ],
+      "crossLinkQuestion": "Föredrar du att jobba med ett team?"
+    },
+    "dennis": {
+      "role": "Agil Coach & Teamledare",
+      "alias": "The Catalyst",
+      "tagline": "I am the one who knocks",
+      "badge": "Agilt & Ledarskap",
+      "pageDescription": "Agil Coach och Teamledare hos Pink Pollos. Gör team bättre.",
+      "subtitle": "Gör team bättre. Inget metodologi-drama, bara resultat. När ditt team kört fast löser jag det.",
+      "bio": [
+        "Team som kört fast, processer som inte fungerar, organisationer som kämpar med förändring — Dennis löser det. Inte med ramverk och certifieringar, utan med sunt förnuft.",
+        "8+ års erfarenhet av att leda utvecklingsteam. Från kaotiska startups till tröga företag. Tillvägagångssättet skiljer sig, resultatet gör det inte: team som levererar.",
+        "Ingen Scrum-polis, ingen Agil-teater. Bara: tydlig kommunikation, fokus på resultat och modet att säga vad ingen vill höra."
+      ],
+      "crossLinkQuestion": "Föredrar du att bygga själv?"
+    }
+  },
+  "friends": {
+    "badge": "Inner Circle",
+    "pageTitle": "Pink Pollos vänner",
+    "pageSubtitle": "Specialister vi känner, har jobbat med och rekommenderar utan tvekan. Inget öppet nätverk — bara bevisad kvalitet.",
+    "pageDescription": "Vår inre cirkel av pålitliga specialister. Handplockade, bevisade, pålitliga.",
+    "intro": "Selektiva. Personliga. Bevisade. Det här är specialister vi känner från tidigare projekt och rekommenderar utan förbehåll. När vi inte är tillgängliga ser de till samma kvalitet.",
+    "available": "Tillgänglig",
+    "busy": "Upptagen",
+    "needSomeoneElse": "Behöver du någon som inte finns här?",
+    "tellUs": "Berätta vad du letar efter →",
+    "list": {
+      "cleaner": {
+        "alias": "The Cleaner",
+        "specialty": "Legacy-kod & Refaktorering",
+        "description": "Förvandlar spaghettikod till fungerande system. Ingen dömning, bara lösningar."
+      },
+      "operator": {
+        "alias": "The Operator",
+        "specialty": "DevOps & Infrastruktur",
+        "description": "Pipelines, containrar, moln. Allt som ska köra, kör."
+      },
+      "chemist": {
+        "alias": "The Chemist",
+        "specialty": "Data Engineering",
+        "description": "Omvandlar rådata till användbara insikter. ETL är hans andra språk."
+      },
+      "fixer": {
+        "alias": "The Fixer",
+        "specialty": "Säkerhet & Compliance",
+        "description": "Hittar hålen innan andra gör det. Pentester, revisioner, GDPR."
+      },
+      "artist": {
+        "alias": "The Artist",
+        "specialty": "UI/UX Design",
+        "description": "Gränssnitt som inte bara fungerar, utan känns rätt. Design systems-specialist."
+      },
+      "professor": {
+        "alias": "The Professor",
+        "specialty": "Tekniskt Ledarskap",
+        "description": "Mentorerar team, designar arkitektur, skapar tekniska roadmaps."
+      }
+    }
+  },
+  "lab": {
+    "badge": "FoU",
+    "pageTitle": "Labbet",
+    "pageSubtitle": "Där vi experimenterar. Egna verktyg, produkter och sidoprojekt. Ibland för kunder, ibland för oss själva. Alltid med samma standard.",
+    "pageDescription": "Egna verktyg, produkter och experiment från Pink Pollos. Från POC till produktion.",
+    "intro": "Förutom kundarbete bygger vi egna verktyg och produkter. Vissa är seriösa, andra är experiment. Alla är byggda med samma standard: inga halvmesyrer.",
+    "status": {
+      "live": "Live",
+      "beta": "Beta",
+      "experiment": "Experiment",
+      "comingSoon": "Kommer snart"
+    },
+    "viewOnGithub": "Se på GitHub →",
+    "viewWebsite": "Se webbplats →",
+    "collaborationIdea": "Har du en idé för ett samarbete?",
+    "letsTalk": "Låt oss prata",
+    "projects": {
+      "methvan": {
+        "name": "MethVan",
+        "description": "Webbplatsen du tittar på just nu. Vår egen plattform byggd med Next.js, Tailwind och mycket kärlek."
+      },
+      "aiIndex": {
+        "name": "AI Index Sites",
+        "description": "En serie AI-genererade indexsidor som katalogiserar landmärken världen över. Från fyrar till slott, väderkvarnar och kyrkor — var och en med detaljerad information, kartor och sökfunktioner."
+      },
+      "euTaxes": {
+        "name": "EU Taxes",
+        "description": "Europeisk skattekalkylator som jämför inkomstskatter mellan EU-länder. Inklusive växelkurser, landsspecifik info och jämförelseverktyg."
+      },
+      "movingPolygons": {
+        "name": "Moving Polygons",
+        "description": "Skapa animerade kartor som visar hur regioner och gränser förändras över tid. Rita polygoner, bygg tidslinjer och dela dina visualiseringar."
+      },
+      "maelstrom": {
+        "name": "Maelstrom IT",
+        "description": "Chris professionella portfolio för CTO-tjänster, fullstack-utveckling och agil coaching. Från strategiskt ledarskap till hands-on utveckling."
+      },
+      "sprintPoker": {
+        "name": "Sprint Poker",
+        "description": "Realtids planning poker för remote-team. Inget konto behövs, dela bara en länk."
+      },
+      "retroBoard": {
+        "name": "Retro Board",
+        "description": "Asynkrona retrospektiv som faktiskt fungerar. Anonyma, strukturerade, handlingsbara."
+      },
+      "codeReviewBot": {
+        "name": "Code Review Bot",
+        "description": "AI-drivna kodgranskningar som faktiskt är användbara. Inga vaga förslag, bara konkreta förbättringar."
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Sidan hittades inte",
+    "description": "Den här sidan finns inte eller har flyttats. Oroa dig inte, även de bästa utvecklarna tappar ibland bort sig.",
+    "backHome": "Tillbaka till hem",
+    "contactUs": "Kontakta oss",
+    "orView": "Eller kolla in:"
+  },
+  "common": {
+    "experience": "års erfarenhet",
+    "availability": "Tillgänglig från"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "moreQuestions": "Fler frågor?",
+    "contactUs": "Kontakta oss",
+    "items": {
+      "whatDoYouDo": {
+        "question": "Vad gör ni exakt?",
+        "answer": "Vi tillhandahåller senior utvecklare och agila experter som integreras direkt i ditt team. Inga trainees, inga långa introduktionsperioder. Du får erfarna proffs som tillför värde till ditt projekt från dag ett."
+      },
+      "howFast": {
+        "question": "Hur snabbt kan ni starta?",
+        "answer": "Vanligtvis inom 1-2 veckor. Vi håller medvetet kapacitet tillgänglig för nya projekt. För brådskande ärenden tittar vi tillsammans på vad som är möjligt — ibland kan vi växla inom några dagar."
+      },
+      "rates": {
+        "question": "Hur fungerar era priser?",
+        "answer": "Vi arbetar med fasta dagspriser, inga överraskningar efteråt. Priserna beror på uppdraget och varaktigheten. I ett första samtal diskuterar vi vad du behöver och vad det kostar."
+      },
+      "remote": {
+        "question": "Jobbar ni på distans?",
+        "answer": "Ja, vi arbetar helt remote eller hybridit, beroende på vad som fungerar bäst för ditt team. Vi är vana vid asynkron kommunikation och har anpassat våra verktyg därefter."
+      },
+      "team": {
+        "question": "Kan ni tillhandahålla ett helt team?",
+        "answer": "Absolut. Genom vår inre cirkel har vi tillgång till bevisade specialister inom olika discipliner. Från ett komplett squad till specifik expertis — vi ordnar det."
+      },
+      "guarantee": {
+        "question": "Vad händer om det inte klickar?",
+        "answer": "Då slutar vi. Inget krångel, inga långa uppsägningstider. Vi tror på passform, inte på kontraktuella tvång. Om det inte fungerar är det slöseri med tid för båda parter."
+      }
+    }
+  }
+}

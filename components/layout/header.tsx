@@ -1,14 +1,26 @@
 "use client";
 
-import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/shared/logo";
-import { NAV_ITEMS } from "@/lib/constants";
+import { LanguageSwitcher } from "./language-switcher";
+
+const navKeys = [
+  { key: "deZaak", href: "/#pillars" },
+  { key: "chris", href: "/chris" },
+  { key: "dennis", href: "/dennis" },
+  { key: "friends", href: "/vrienden" },
+  { key: "lab", href: "/lab" },
+] as const;
 
 export function Header() {
+  const pathname = usePathname();
+  const t = useTranslations("nav");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -36,25 +48,34 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm text-stone-400 hover:text-white transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="hidden min-[840px]:flex items-center gap-6">
+            {navKeys.map((item) => {
+              const isActive = pathname.endsWith(item.href) ||
+                (item.href === "/#pillars" && pathname.endsWith("/"));
+              return (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className={`text-sm transition-colors ${
+                    isActive
+                      ? "text-white font-medium"
+                      : "text-stone-400 hover:text-white"
+                  }`}
+                >
+                  {t(item.key)}
+                </Link>
+              );
+            })}
+            <LanguageSwitcher />
             <Button href="/contact" variant="solid" size="default">
-              Contact
+              {t("contact")}
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-stone-400"
+            className="min-[840px]:hidden p-2 text-stone-400"
             aria-label="Toggle menu"
           >
             <svg
@@ -89,25 +110,35 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-stone-800 bg-stone-950/95 backdrop-blur-md"
+              className="min-[840px]:hidden border-t border-stone-800 bg-stone-950/95 backdrop-blur-md"
             >
               <div className="py-4 space-y-4">
-                {NAV_ITEMS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-stone-400 hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navKeys.map((item) => {
+                  const isActive = pathname.endsWith(item.href);
+                  return (
+                    <Link
+                      key={item.key}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block ${
+                        isActive
+                          ? "text-white font-medium"
+                          : "text-stone-400 hover:text-white"
+                      }`}
+                    >
+                      {t(item.key)}
+                    </Link>
+                  );
+                })}
+                <div className="pt-2">
+                  <LanguageSwitcher />
+                </div>
                 <Button
                   href="/contact"
                   variant="solid"
                   className="w-full mt-4"
                 >
-                  Contact
+                  {t("contact")}
                 </Button>
               </div>
             </motion.div>

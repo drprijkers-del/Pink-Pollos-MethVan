@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Divider, Stamp } from "@/components/shared/decorative";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import { PROOF_POINTS } from "@/lib/constants";
 
 const proofIcons = [
   // Geen juniors - shield icon
@@ -54,7 +54,11 @@ const proofIcons = [
   </svg>,
 ];
 
+const proofKeys = ["noJuniors", "noSurprises", "noDrama"];
+
 export function Proof() {
+  const t = useTranslations("proof");
+
   return (
     <section className="relative py-24 md:py-32 bg-stone-900 dark:bg-stone-950 overflow-hidden">
       {/* Decorative stamp */}
@@ -75,16 +79,16 @@ export function Proof() {
           {/* Section header */}
           <motion.div variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
-              Kwaliteit is geen toeval
+              {t("sectionTitle")}
             </h2>
             <Divider className="max-w-xs mx-auto mt-8" />
           </motion.div>
 
           {/* Proof points */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {PROOF_POINTS.map((point, index) => (
+            {proofKeys.map((key, index) => (
               <motion.div
-                key={point.title}
+                key={key}
                 variants={fadeUp}
                 className="relative group"
               >
@@ -99,10 +103,10 @@ export function Proof() {
 
                   {/* Content */}
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    {point.title}
+                    {t(`${key}.title`)}
                   </h3>
                   <p className="text-stone-400 leading-relaxed">
-                    {point.description}
+                    {t(`${key}.description`)}
                   </p>
                 </div>
               </motion.div>
@@ -112,8 +116,7 @@ export function Proof() {
           {/* Bottom quote */}
           <motion.div variants={fadeUp} className="mt-16 text-center">
             <blockquote className="text-lg md:text-xl text-stone-400 italic max-w-2xl mx-auto">
-              &ldquo;We zijn geen agency. We zijn gewoon hele goede mensen die toevallig
-              ook heel goed zijn in wat ze doen.&rdquo;
+              &ldquo;{t("quote")}&rdquo;
             </blockquote>
           </motion.div>
         </motion.div>

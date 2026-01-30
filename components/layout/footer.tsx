@@ -1,9 +1,23 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/shared/logo";
-import { SITE_CONFIG, NAV_ITEMS } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
+
+const navKeys = [
+  { key: "deZaak", href: "/#pillars" },
+  { key: "chris", href: "/chris" },
+  { key: "dennis", href: "/dennis" },
+  { key: "friends", href: "/vrienden" },
+  { key: "lab", href: "/lab" },
+] as const;
 
 export function Footer() {
+  const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
+
   return (
     <footer className="relative border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 overflow-hidden">
       {/* Subtle gradient */}
@@ -18,8 +32,7 @@ export function Footer() {
                 <Logo size="md" showText={true} />
               </Link>
               <p className="mt-6 text-stone-600 dark:text-stone-400 max-w-sm leading-relaxed">
-                Senior expertise, strak verpakt. Development en agile consulting
-                zonder de bullshit.
+                {t("tagline")}
               </p>
 
               {/* Social links placeholder */}
@@ -50,16 +63,16 @@ export function Footer() {
             {/* Navigation */}
             <div className="md:col-span-3">
               <h4 className="text-sm font-semibold text-stone-900 dark:text-stone-50 mb-6 uppercase tracking-wider">
-                Navigatie
+                {t("navigation")}
               </h4>
               <ul className="space-y-4">
-                {NAV_ITEMS.map((item) => (
-                  <li key={item.href}>
+                {navKeys.map((item) => (
+                  <li key={item.key}>
                     <Link
                       href={item.href}
                       className="text-stone-600 dark:text-stone-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
                     >
-                      {item.label}
+                      {tNav(item.key)}
                     </Link>
                   </li>
                 ))}
@@ -69,7 +82,7 @@ export function Footer() {
             {/* Contact */}
             <div className="md:col-span-4">
               <h4 className="text-sm font-semibold text-stone-900 dark:text-stone-50 mb-6 uppercase tracking-wider">
-                Contact
+                {t("contact")}
               </h4>
               <ul className="space-y-4">
                 <li>
@@ -85,7 +98,7 @@ export function Footer() {
                     href="/contact"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-600 text-white text-sm font-medium hover:bg-pink-700 transition-colors"
                   >
-                    Plan een kennismaking
+                    {t("meetUs")}
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -108,8 +121,7 @@ export function Footer() {
           {/* Bottom bar */}
           <div className="mt-16 pt-8 border-t border-stone-300 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-stone-500">
-              &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. Kwaliteit is
-              geen toeval.
+              &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t("copyright")}
             </p>
             <p className="text-sm text-stone-500">
               KvK 12345678 &middot; BTW NL123456789B01

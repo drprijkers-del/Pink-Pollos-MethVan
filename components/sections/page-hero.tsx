@@ -38,7 +38,8 @@ export function PageHero({ title, subtitle, badge, children }: PageHeroProps) {
           {/* Badge */}
           {badge && (
             <motion.div variants={fadeUp} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-sm font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 text-pink-400 text-sm font-medium tracking-wide">
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
                 {badge}
               </span>
             </motion.div>

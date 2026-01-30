@@ -1,13 +1,67 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { CornerAccent, LogoHex } from "@/components/shared/logo-fragments";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { SITE_CONFIG } from "@/lib/constants";
 
+type FormStatus = "idle" | "loading" | "success" | "error";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export function ContactSection() {
+  const t = useTranslations("contact");
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || t("error"));
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : t("error")
+      );
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 bg-stone-50 dark:bg-stone-900">
       <Container>
@@ -21,19 +75,17 @@ export function ContactSection() {
           {/* Left: Info */}
           <motion.div variants={fadeUp}>
             <h2 className="text-2xl md:text-3xl font-semibold text-stone-900 dark:text-white mb-6">
-              Direct contact
+              {t("formTitle")}
             </h2>
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-8">
-              Geen contactformulier dat in een zwart gat verdwijnt. Stuur een
-              mail en je hoort binnen 24 uur van ons. Liever bellen? Laat je
-              nummer achter.
+              {t("formDescription")}
             </p>
 
             {/* Contact details */}
             <div className="space-y-6">
               <div>
                 <p className="text-sm text-stone-500 uppercase tracking-wider mb-2">
-                  Email
+                  {t("labels.email")}
                 </p>
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
@@ -45,20 +97,20 @@ export function ContactSection() {
 
               <div>
                 <p className="text-sm text-stone-500 uppercase tracking-wider mb-2">
-                  Response tijd
+                  Response
                 </p>
                 <p className="text-stone-900 dark:text-white font-medium">
-                  Binnen 24 uur
+                  {t("responseTime")}
                 </p>
               </div>
 
               <div>
                 <p className="text-sm text-stone-500 uppercase tracking-wider mb-2">
-                  Liever LinkedIn?
+                  {t("linkedInQuestion")}
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/cjager272/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-stone-600 dark:text-stone-400 hover:text-pink-600 dark:hover:text-pink-400"
@@ -66,7 +118,7 @@ export function ContactSection() {
                     Chris →
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/dennisrijkers/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-stone-600 dark:text-stone-400 hover:text-pink-600 dark:hover:text-pink-400"
@@ -88,69 +140,127 @@ export function ContactSection() {
                 <LogoHex className="w-full h-full" />
               </div>
 
-              <form className="relative space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+              {status === "success" ? (
+                <div className="relative text-center py-8">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-green-600 dark:text-green-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-stone-900 dark:text-white mb-2">
+                    {t("success.title")}
+                  </h3>
+                  <p className="text-stone-600 dark:text-stone-400 mb-6">
+                    {t("success.description")}
+                  </p>
+                  <Button
+                    variant="outline"
+                    onClick={() => setStatus("idle")}
+                    className="mx-auto"
                   >
-                    Naam
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                    placeholder="Je naam"
-                  />
+                    {t("success.newMessage")}
+                  </Button>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="relative space-y-6">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                    >
+                      {t("labels.name")}
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      disabled={status === "loading"}
+                      className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors disabled:opacity-50"
+                      placeholder={t("placeholders.name")}
+                    />
+                  </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                    >
+                      {t("labels.email")}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      disabled={status === "loading"}
+                      className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors disabled:opacity-50"
+                      placeholder={t("placeholders.email")}
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
+                    >
+                      {t("labels.message")}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      disabled={status === "loading"}
+                      className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors resize-none disabled:opacity-50"
+                      placeholder={t("placeholders.message")}
+                    />
+                  </div>
+
+                  {status === "error" && (
+                    <div className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+                      <p className="text-sm text-red-600 dark:text-red-400">
+                        {errorMessage}
+                      </p>
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    variant="solid"
+                    className="w-full"
+                    disabled={status === "loading"}
                   >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                    placeholder="je@email.com"
-                  />
-                </div>
+                    {status === "loading" ? t("submitting") : t("submit")}
+                  </Button>
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-2"
-                  >
-                    Bericht
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors resize-none"
-                    placeholder="Waar kunnen we je mee helpen?"
-                  />
-                </div>
-
-                <Button variant="solid" className="w-full">
-                  Verstuur bericht
-                </Button>
-
-                <p className="text-xs text-stone-500 text-center">
-                  Of mail direct naar{" "}
-                  <a
-                    href={`mailto:${SITE_CONFIG.email}`}
-                    className="text-pink-600 dark:text-pink-400 hover:underline"
-                  >
-                    {SITE_CONFIG.email}
-                  </a>
-                </p>
-              </form>
+                  <p className="text-xs text-stone-500 text-center">
+                    {t("orMailDirectly")}{" "}
+                    <a
+                      href={`mailto:${SITE_CONFIG.email}`}
+                      className="text-pink-600 dark:text-pink-400 hover:underline"
+                    >
+                      {SITE_CONFIG.email}
+                    </a>
+                  </p>
+                </form>
+              )}
             </div>
           </motion.div>
         </motion.div>

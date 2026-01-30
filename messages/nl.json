@@ -1,0 +1,280 @@
+{
+  "site": {
+    "name": "Pink Pollos",
+    "description": "Wij doen niet aan onboarding-theater. Senior developers en agile experts die je team versterken vanaf dag één."
+  },
+  "nav": {
+    "deZaak": "De Zaak",
+    "chris": "Chris",
+    "dennis": "Dennis",
+    "friends": "Vrienden",
+    "lab": "Het Lab",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Senior Expertise",
+    "headline1": "Wij bouwen.",
+    "headline2": "Wij begeleiden.",
+    "headline3": "Wij leveren.",
+    "subheadline": "Senior developers en agile experts die direct waarde leveren aan je team. Geen inwerktrajecten, geen ruis — gewoon resultaat vanaf dag één.",
+    "trustPoints": {
+      "seniors": "Ervaren seniors",
+      "available": "Direct inzetbaar",
+      "proven": "Bewezen resultaat"
+    },
+    "cta": {
+      "primary": "Plan een gesprek",
+      "secondary": "Bekijk onze aanpak"
+    }
+  },
+  "pillars": {
+    "sectionBadge": "Zo werken wij",
+    "sectionTitle": "Drie manieren om te leveren",
+    "sectionSubtitle": "Direct met ons. Via ons netwerk. Of met tools die we zelf bouwen.",
+    "deZaak": {
+      "title": "Direct inzetbaar",
+      "description": "Chris en Dennis. Twee seniors die leveren zonder supervisie. Full-stack development. Agile transformatie. Geen agency-overhead.",
+      "linkLabel": "Maak kennis"
+    },
+    "friends": {
+      "title": "De inner circle",
+      "description": "Niet iedereen mag meedoen. Onze vrienden zijn handgepickte specialisten met bewezen track record. Als wij niet beschikbaar zijn, regelen we iemand die wél levert.",
+      "linkLabel": "Ontmoet de familia"
+    },
+    "lab": {
+      "title": "Waar we experimenteren",
+      "description": "Eigen tools, producten en side projects. Van POC tot productie. Soms voor klanten, soms voor onszelf.",
+      "linkLabel": "Bekijk het lab"
+    }
+  },
+  "proof": {
+    "sectionTitle": "Kwaliteit is geen toeval",
+    "noJuniors": {
+      "title": "Geen juniors",
+      "description": "Elke consultant heeft minimaal 8 jaar ervaring. Punt."
+    },
+    "noSurprises": {
+      "title": "Geen verrassingen",
+      "description": "Vaste tarieven, heldere communicatie, nul bullshit."
+    },
+    "noDrama": {
+      "title": "Geen drama",
+      "description": "We integreren in je team alsof we er altijd al waren."
+    },
+    "quote": "We zijn geen agency. We zijn gewoon hele goede mensen die toevallig ook heel goed zijn in wat ze doen."
+  },
+  "cta": {
+    "title": "Klaar om te praten?",
+    "description": "Geen sales calls. Geen decks. Gewoon een eerlijk gesprek over wat je nodig hebt en of wij de juiste fit zijn.",
+    "primaryButton": "Neem contact op",
+    "secondaryButton": "Of mail direct"
+  },
+  "contact": {
+    "badge": "Let's Talk",
+    "pageTitle": "Klaar om te praten?",
+    "pageSubtitle": "Geen sales calls. Geen decks. Gewoon een eerlijk gesprek over wat je nodig hebt en of wij de juiste fit zijn.",
+    "pageDescription": "Neem contact op met Pink Pollos. Geen sales calls, gewoon een eerlijk gesprek.",
+    "formTitle": "Direct contact",
+    "formDescription": "Geen contactformulier dat in een zwart gat verdwijnt. Stuur een mail en je hoort binnen 24 uur van ons. Liever bellen? Laat je nummer achter.",
+    "labels": {
+      "name": "Naam",
+      "email": "Email",
+      "message": "Bericht"
+    },
+    "placeholders": {
+      "name": "Je naam",
+      "email": "je@email.com",
+      "message": "Waar kunnen we je mee helpen?"
+    },
+    "submit": "Verstuur bericht",
+    "submitting": "Verzenden...",
+    "success": {
+      "title": "Bericht verzonden!",
+      "description": "We nemen zo snel mogelijk contact met je op.",
+      "newMessage": "Nieuw bericht versturen"
+    },
+    "error": "Er ging iets mis",
+    "responseTime": "Binnen 24 uur",
+    "linkedInQuestion": "Liever LinkedIn?",
+    "orMailDirectly": "Of mail direct naar"
+  },
+  "footer": {
+    "tagline": "Senior expertise, strak verpakt. Development en agile consulting zonder de bullshit.",
+    "navigation": "Navigatie",
+    "contact": "Contact",
+    "meetUs": "Plan een kennismaking",
+    "copyright": "Kwaliteit is geen toeval."
+  },
+  "profiles": {
+    "yearsExperience": "jaar ervaring",
+    "available": "beschikbaar",
+    "skillsTitle": "Skills & Expertise",
+    "contactButton": "Neem contact op",
+    "meetPerson": "Ontmoet {name}",
+    "chris": {
+      "role": "Senior Full-stack Developer",
+      "alias": "The Architect",
+      "tagline": "One Man Army",
+      "badge": "Full-stack Development",
+      "pageDescription": "Senior Full-stack Developer bij Pink Pollos. Bouwt systemen die werken.",
+      "subtitle": "Bouwt systemen die werken. Geen excuses, geen drama. Gewoon code die doet wat het moet doen.",
+      "bio": [
+        "Meer dan 10 jaar ervaring in het bouwen van schaalbare applicaties. Van startup MVP tot enterprise platform — Chris heeft het gebouwd.",
+        "Specialiteit: complexe problemen reduceren tot elegante oplossingen. Geen overengineering, geen shortcuts. Code die werkt, leesbaar is, en blijft werken.",
+        "Pragmatisch, direct, en allergisch voor bullshit. Als iets niet kan, hoor je het meteen. Als het wél kan, is het morgen af."
+      ],
+      "crossLinkQuestion": "Liever met een team werken?"
+    },
+    "dennis": {
+      "role": "Agile Coach & Team Manager",
+      "alias": "The Catalyst",
+      "tagline": "I am the one who knocks",
+      "badge": "Agile & Leadership",
+      "pageDescription": "Agile Coach en Team Manager bij Pink Pollos. Maakt teams beter.",
+      "subtitle": "Maakt teams beter. Geen methodologie-gedram, wel resultaat. Als je team vastzit, los ik het op.",
+      "bio": [
+        "Teams die vastlopen, processen die niet werken, organisaties die worstelen met verandering — Dennis lost het op. Niet met frameworks en certifications, maar met gezond verstand.",
+        "8+ jaar ervaring in het begeleiden van development teams. Van chaotische startups tot logge enterprises. De aanpak verschilt, het resultaat niet: teams die leveren.",
+        "Geen Scrum-politie, geen Agile-theater. Wel: heldere communicatie, focus op resultaat, en de moed om te zeggen wat niemand wil horen."
+      ],
+      "crossLinkQuestion": "Liever zelf bouwen?"
+    }
+  },
+  "friends": {
+    "badge": "Inner Circle",
+    "pageTitle": "Vrienden van Pink Pollos",
+    "pageSubtitle": "Specialisten die we kennen, hebben samengewerkt met, en zonder twijfel aanbevelen. Geen open netwerk — alleen bewezen kwaliteit.",
+    "pageDescription": "Onze inner circle van vertrouwde specialisten. Handgepickt, bewezen, betrouwbaar.",
+    "intro": "Selectief. Persoonlijk. Bewezen. Dit zijn specialisten die we kennen van eerdere projecten en zonder voorbehoud aanbevelen. Als wij niet beschikbaar zijn, zorgen zij voor dezelfde kwaliteit.",
+    "available": "Beschikbaar",
+    "busy": "Bezet",
+    "needSomeoneElse": "Iemand nodig die hier niet staat?",
+    "tellUs": "Vertel ons wat je zoekt →",
+    "list": {
+      "cleaner": {
+        "alias": "The Cleaner",
+        "specialty": "Legacy Code & Refactoring",
+        "description": "Maakt van spaghetti-code werkbare systemen. Geen oordeel, alleen oplossingen."
+      },
+      "operator": {
+        "alias": "The Operator",
+        "specialty": "DevOps & Infrastructure",
+        "description": "Pipelines, containers, cloud. Alles wat moet draaien, draait."
+      },
+      "chemist": {
+        "alias": "The Chemist",
+        "specialty": "Data Engineering",
+        "description": "Transformeert ruwe data naar bruikbare inzichten. ETL is zijn tweede taal."
+      },
+      "fixer": {
+        "alias": "The Fixer",
+        "specialty": "Security & Compliance",
+        "description": "Vindt de gaten voordat anderen dat doen. Pentests, audits, GDPR."
+      },
+      "artist": {
+        "alias": "The Artist",
+        "specialty": "UI/UX Design",
+        "description": "Interfaces die niet alleen werken, maar ook voelen. Design systems specialist."
+      },
+      "professor": {
+        "alias": "The Professor",
+        "specialty": "Technical Leadership",
+        "description": "Mentort teams, ontwerpt architectuur, maakt technische roadmaps."
+      }
+    }
+  },
+  "lab": {
+    "badge": "R&D",
+    "pageTitle": "Het Lab",
+    "pageSubtitle": "Waar we experimenteren. Eigen tools, producten en side projects. Soms voor klanten, soms voor onszelf. Altijd met dezelfde standaard.",
+    "pageDescription": "Eigen tools, producten en experimenten van Pink Pollos. Van POC tot productie.",
+    "intro": "Naast klantwerk bouwen we onze eigen tools en producten. Sommige zijn serieus, andere zijn experimenten. Allemaal zijn ze gebouwd met dezelfde standaard: geen half werk.",
+    "status": {
+      "live": "Live",
+      "beta": "Beta",
+      "experiment": "Experiment",
+      "comingSoon": "Coming Soon"
+    },
+    "viewOnGithub": "Bekijk op GitHub →",
+    "viewWebsite": "Bekijk website →",
+    "collaborationIdea": "Idee voor een samenwerking?",
+    "letsTalk": "Laten we praten",
+    "projects": {
+      "methvan": {
+        "name": "MethVan",
+        "description": "De website die je nu bekijkt. Ons eigen platform gebouwd met Next.js, Tailwind en veel liefde."
+      },
+      "aiIndex": {
+        "name": "AI Index Sites",
+        "description": "Een serie AI-gegenereerde indexsites die landmarks wereldwijd catalogiseren. Van vuurtorens tot kastelen, molens en kerken — elk met gedetailleerde informatie, kaarten en zoekfuncties."
+      },
+      "euTaxes": {
+        "name": "EU Taxes",
+        "description": "Europese belastingcalculator die inkomstenbelasting over EU-landen vergelijkt. Inclusief wisselkoersen, landspecifieke info en vergelijkingstools."
+      },
+      "movingPolygons": {
+        "name": "Moving Polygons",
+        "description": "Maak geanimeerde kaarten die laten zien hoe regio's en grenzen door de tijd veranderen. Teken polygonen, bouw tijdlijnen en deel je visualisaties."
+      },
+      "maelstrom": {
+        "name": "Maelstrom IT",
+        "description": "Chris zijn professionele portfolio voor CTO-services, fullstack engineering en agile coaching. Van strategisch leiderschap tot hands-on development."
+      },
+      "sprintPoker": {
+        "name": "Sprint Poker",
+        "description": "Real-time planning poker voor remote teams. Geen account nodig, gewoon een link delen."
+      },
+      "retroBoard": {
+        "name": "Retro Board",
+        "description": "Async retrospectives die wél werken. Anoniem, gestructureerd, actionable."
+      },
+      "codeReviewBot": {
+        "name": "Code Review Bot",
+        "description": "AI-powered code reviews die echt nuttig zijn. Geen vage suggesties, wel concrete verbeteringen."
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Pagina niet gevonden",
+    "description": "Deze pagina bestaat niet of is verplaatst. Geen zorgen, zelfs de beste developers raken soms de weg kwijt.",
+    "backHome": "Terug naar home",
+    "contactUs": "Neem contact op",
+    "orView": "Of bekijk:"
+  },
+  "common": {
+    "experience": "jaar ervaring",
+    "availability": "Beschikbaar vanaf"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "moreQuestions": "Nog vragen?",
+    "contactUs": "Neem contact op",
+    "items": {
+      "whatDoYouDo": {
+        "question": "Wat doen jullie precies?",
+        "answer": "Wij leveren senior developers en agile experts die direct meedraaien in je team. Geen trainees, geen lange inwerkperiodes. Je krijgt ervaren professionals die vanaf dag één waarde toevoegen aan je project."
+      },
+      "howFast": {
+        "question": "Hoe snel kunnen jullie starten?",
+        "answer": "Meestal binnen 1-2 weken. We houden bewust capaciteit vrij voor nieuwe projecten. Bij urgente zaken kijken we samen naar wat mogelijk is — soms kunnen we al binnen enkele dagen schakelen."
+      },
+      "rates": {
+        "question": "Hoe werken jullie tarieven?",
+        "answer": "We werken met vaste dagtarieven, geen verrassingen achteraf. Tarieven zijn afhankelijk van de opdracht en duur. In een eerste gesprek bespreken we wat je nodig hebt en wat dat kost."
+      },
+      "remote": {
+        "question": "Werken jullie ook remote?",
+        "answer": "Ja, we werken volledig remote of hybride, afhankelijk van wat het beste werkt voor jouw team. We zijn gewend aan async communicatie en hebben onze tooling daarop ingericht."
+      },
+      "team": {
+        "question": "Kunnen jullie ook een heel team leveren?",
+        "answer": "Absoluut. Via onze inner circle hebben we toegang tot bewezen specialisten in diverse disciplines. Van een complete squad tot specifieke expertise — we regelen het."
+      },
+      "guarantee": {
+        "question": "Wat als het niet klikt?",
+        "answer": "Dan stoppen we. Geen gedoe, geen lange opzegtermijnen. We geloven in fit, niet in contractuele dwang. Als het niet werkt, is dat voor beide partijen zonde van de tijd."
+      }
+    }
+  }
+}

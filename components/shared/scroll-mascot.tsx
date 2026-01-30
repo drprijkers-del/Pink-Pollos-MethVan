@@ -36,7 +36,7 @@ export function ScrollMascot() {
         {/* The chicken mascot - peeking from bottom right */}
         <Image
           src="/images/mascot-chicken.png"
-          alt=""
+          alt="Pink Pollos mascot"
           width={200}
           height={200}
           className="relative w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
@@ -79,7 +79,7 @@ export function ScrollMascotParallax() {
 
         <Image
           src="/images/mascot-chicken.png"
-          alt=""
+          alt="Pink Pollos mascot"
           width={180}
           height={180}
           className="relative w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-[0_0_30px_rgba(236,72,153,0.3)]"
@@ -132,7 +132,7 @@ export function ScrollMascotPeek() {
 
         <Image
           src="/images/mascot-chicken.png"
-          alt=""
+          alt="Pink Pollos mascot"
           width={200}
           height={200}
           className="relative w-36 h-36 md:w-44 md:h-44 xl:w-52 xl:h-52 object-contain"

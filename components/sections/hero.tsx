@@ -2,11 +2,13 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { GridBackground } from "@/components/shared/grid-background";
 
 export function Hero() {
+  const t = useTranslations("hero");
   const shouldReduceMotion = useReducedMotion();
 
   // Animation variants
@@ -65,7 +67,7 @@ export function Hero() {
             <motion.div variants={fadeUp} transition={transition} className="mb-8">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 text-pink-400 text-sm font-medium tracking-wide">
                 <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                Senior Expertise
+                {t("badge")}
               </span>
             </motion.div>
 
@@ -75,12 +77,12 @@ export function Hero() {
               transition={transition}
               className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white/95 leading-[1.1]"
             >
-              Wij bouwen.
+              {t("headline1")}
               <br />
-              Wij begeleiden.
+              {t("headline2")}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-500">
-                Wij leveren.
+                {t("headline3")}
               </span>
             </motion.h1>
 
@@ -90,8 +92,7 @@ export function Hero() {
               transition={transition}
               className="mt-8 text-lg text-stone-300/90 leading-relaxed max-w-lg"
             >
-              Senior developers en agile experts die direct waarde leveren aan je team.
-              Geen inwerktrajecten, geen ruis — gewoon resultaat vanaf dag één.
+              {t("subheadline")}
             </motion.p>
 
             {/* Trust indicators - cleaner, minder "edgy" */}
@@ -100,7 +101,7 @@ export function Hero() {
               transition={transition}
               className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3"
             >
-              {["Ervaren seniors", "Direct inzetbaar", "Bewezen resultaat"].map((item) => (
+              {[t("trustPoints.seniors"), t("trustPoints.available"), t("trustPoints.proven")].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm text-stone-400">
                   <svg className="w-4 h-4 text-pink-500/80" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -123,7 +124,7 @@ export function Hero() {
                 size="large"
                 className="group relative shadow-xl shadow-pink-500/20 hover:shadow-pink-500/30 transition-shadow"
               >
-                <span>Plan een gesprek</span>
+                <span>{t("cta.primary")}</span>
                 <svg
                   className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5"
                   fill="none"
@@ -139,7 +140,7 @@ export function Hero() {
                 onClick={() => document.getElementById("pillars")?.scrollIntoView({ behavior: "smooth" })}
                 className="inline-flex items-center text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
-                <span>Bekijk onze aanpak</span>
+                <span>{t("cta.secondary")}</span>
                 <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                 </svg>

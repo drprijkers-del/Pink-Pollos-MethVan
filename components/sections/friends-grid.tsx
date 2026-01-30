@@ -1,57 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { CornerAccent, LogoHex } from "@/components/shared/logo-fragments";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
-type Friend = {
-  alias: string;
-  specialty: string;
-  description: string;
-  available: boolean;
-};
-
-const friends: Friend[] = [
-  {
-    alias: "The Cleaner",
-    specialty: "Legacy Code & Refactoring",
-    description: "Maakt van spaghetti-code werkbare systemen. Geen oordeel, alleen oplossingen.",
-    available: true,
-  },
-  {
-    alias: "The Operator",
-    specialty: "DevOps & Infrastructure",
-    description: "Pipelines, containers, cloud. Alles wat moet draaien, draait.",
-    available: true,
-  },
-  {
-    alias: "The Chemist",
-    specialty: "Data Engineering",
-    description: "Transformeert ruwe data naar bruikbare inzichten. ETL is zijn tweede taal.",
-    available: false,
-  },
-  {
-    alias: "The Fixer",
-    specialty: "Security & Compliance",
-    description: "Vindt de gaten voordat anderen dat doen. Pentests, audits, GDPR.",
-    available: true,
-  },
-  {
-    alias: "The Artist",
-    specialty: "UI/UX Design",
-    description: "Interfaces die niet alleen werken, maar ook voelen. Design systems specialist.",
-    available: false,
-  },
-  {
-    alias: "The Professor",
-    specialty: "Technical Leadership",
-    description: "Mentort teams, ontwerpt architectuur, maakt technische roadmaps.",
-    available: true,
-  },
-];
+const friendKeys = [
+  { key: "cleaner", available: true },
+  { key: "operator", available: true },
+  { key: "chemist", available: false },
+  { key: "fixer", available: true },
+  { key: "artist", available: false },
+  { key: "professor", available: true },
+] as const;
 
 export function FriendsGrid() {
+  const t = useTranslations("friends");
+
   return (
     <section className="py-16 md:py-24 bg-stone-50 dark:bg-stone-900">
       <Container>
@@ -64,17 +31,15 @@ export function FriendsGrid() {
           {/* Intro */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-12">
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
-              Selectief. Persoonlijk. Bewezen. Dit zijn specialisten die we kennen
-              van eerdere projecten en zonder voorbehoud aanbevelen. Als wij niet
-              beschikbaar zijn, zorgen zij voor dezelfde kwaliteit.
+              {t("intro")}
             </p>
           </motion.div>
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {friends.map((friend) => (
+            {friendKeys.map((friend) => (
               <motion.div
-                key={friend.alias}
+                key={friend.key}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
                 className="group relative"
@@ -98,23 +63,23 @@ export function FriendsGrid() {
                         }`}
                       />
                       <span className="text-xs text-stone-500 uppercase tracking-wider">
-                        {friend.available ? "Beschikbaar" : "Bezet"}
+                        {friend.available ? t("available") : t("busy")}
                       </span>
                     </div>
 
                     {/* Alias */}
                     <h3 className="text-xl font-semibold text-stone-900 dark:text-white mb-1">
-                      {friend.alias}
+                      {t(`list.${friend.key}.alias`)}
                     </h3>
 
                     {/* Specialty */}
                     <p className="text-sm text-pink-600 dark:text-pink-400 font-medium mb-4">
-                      {friend.specialty}
+                      {t(`list.${friend.key}.specialty`)}
                     </p>
 
                     {/* Description */}
                     <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-                      {friend.description}
+                      {t(`list.${friend.key}.description`)}
                     </p>
                   </div>
                 </div>
@@ -125,14 +90,14 @@ export function FriendsGrid() {
           {/* CTA */}
           <motion.div variants={fadeUp} className="mt-12 text-center">
             <p className="text-stone-600 dark:text-stone-400 mb-4">
-              Iemand nodig die hier niet staat?
+              {t("needSomeoneElse")}
             </p>
-            <a
+            <Link
               href="/contact"
               className="text-pink-600 dark:text-pink-400 font-medium hover:underline"
             >
-              Vertel ons wat je zoekt →
-            </a>
+              {t("tellUs")}
+            </Link>
           </motion.div>
         </motion.div>
       </Container>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/shared/logo";
@@ -8,6 +9,8 @@ import { GradientOrb } from "@/components/shared/decorative";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function CtaSection() {
+  const t = useTranslations("cta");
+
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Background decorations */}
@@ -52,19 +55,18 @@ export function CtaSection() {
 
               {/* Headline */}
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">
-                Klaar om te praten?
+                {t("title")}
               </h2>
 
               {/* Body */}
               <p className="mt-6 text-lg text-stone-600 dark:text-stone-400 max-w-lg mx-auto">
-                Geen sales calls. Geen decks. Gewoon een eerlijk gesprek over wat
-                je nodig hebt en of wij de juiste fit zijn.
+                {t("description")}
               </p>
 
               {/* CTA */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/contact" variant="solid" size="large">
-                  Neem contact op
+                  {t("primaryButton")}
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="none"
@@ -84,7 +86,7 @@ export function CtaSection() {
                   variant="ghost"
                   size="large"
                 >
-                  Of mail direct
+                  {t("secondaryButton")}
                 </Button>
               </div>
             </motion.div>

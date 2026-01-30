@@ -1,55 +1,77 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { CornerAccent, LogoLines } from "@/components/shared/logo-fragments";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
-type Project = {
-  name: string;
+type ProjectConfig = {
+  key: string;
   status: "live" | "beta" | "experiment" | "coming-soon";
-  description: string;
   tags: string[];
   link?: string;
 };
 
-const projects: Project[] = [
+const projectsConfig: ProjectConfig[] = [
   {
-    name: "MethVan",
+    key: "methvan",
     status: "beta",
-    description: "De website die je nu bekijkt. Ons eigen platform gebouwd met Next.js, Tailwind en veel liefde.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     link: "https://github.com/drprijkers-del/Pink-Pollos-MethVan",
   },
   {
-    name: "Sprint Poker",
+    key: "aiIndex",
+    status: "live",
+    tags: ["AI", "OpenStreetMap", "Next.js"],
+    link: "https://lighthouse-index.com",
+  },
+  {
+    key: "euTaxes",
+    status: "live",
+    tags: ["React", "Finance", "EU"],
+    link: "https://eutaxes.app",
+  },
+  {
+    key: "movingPolygons",
+    status: "live",
+    tags: ["Maps", "Animation", "GIS"],
+    link: "https://movingpolygons.com",
+  },
+  {
+    key: "maelstrom",
+    status: "live",
+    tags: ["Portfolio", "Consulting", "Tech Leadership"],
+    link: "https://maelstromit.com",
+  },
+  {
+    key: "sprintPoker",
     status: "experiment",
-    description: "Real-time planning poker voor remote teams. Geen account nodig, gewoon een link delen.",
     tags: ["WebSockets", "React", "Real-time"],
   },
   {
-    name: "Retro Board",
+    key: "retroBoard",
     status: "coming-soon",
-    description: "Async retrospectives die wél werken. Anoniem, gestructureerd, actionable.",
     tags: ["Collaboration", "Agile", "SaaS"],
   },
   {
-    name: "Code Review Bot",
+    key: "codeReviewBot",
     status: "experiment",
-    description: "AI-powered code reviews die echt nuttig zijn. Geen vage suggesties, wel concrete verbeteringen.",
     tags: ["AI", "GitHub", "Developer Tools"],
   },
 ];
 
-const statusConfig = {
-  live: { label: "Live", color: "bg-green-500" },
-  beta: { label: "Beta", color: "bg-blue-500" },
-  experiment: { label: "Experiment", color: "bg-amber-500" },
-  "coming-soon": { label: "Coming Soon", color: "bg-stone-400" },
+const statusColors = {
+  live: "bg-green-500",
+  beta: "bg-blue-500",
+  experiment: "bg-amber-500",
+  "coming-soon": "bg-stone-400",
 };
 
 export function LabGrid() {
+  const t = useTranslations("lab");
+
   return (
     <section className="py-16 md:py-24 bg-stone-50 dark:bg-stone-900 relative overflow-hidden">
       {/* Background decoration */}
@@ -67,17 +89,15 @@ export function LabGrid() {
           {/* Intro */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-12">
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
-              Naast klantwerk bouwen we onze eigen tools en producten. Sommige
-              zijn serieus, andere zijn experimenten. Allemaal zijn ze gebouwd
-              met dezelfde standaard: geen half werk.
+              {t("intro")}
             </p>
           </motion.div>
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project) => (
+            {projectsConfig.map((project) => (
               <motion.div
-                key={project.name}
+                key={project.key}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
                 className="group relative"
@@ -87,20 +107,20 @@ export function LabGrid() {
 
                   {/* Status badge */}
                   <div className="flex items-center gap-2 mb-4">
-                    <span className={`w-2 h-2 rounded-full ${statusConfig[project.status].color}`} />
+                    <span className={`w-2 h-2 rounded-full ${statusColors[project.status]}`} />
                     <span className="text-xs text-stone-500 uppercase tracking-wider">
-                      {statusConfig[project.status].label}
+                      {t(`status.${project.status === "coming-soon" ? "comingSoon" : project.status}`)}
                     </span>
                   </div>
 
                   {/* Name */}
                   <h3 className="text-xl font-semibold text-stone-900 dark:text-white mb-3">
-                    {project.name}
+                    {t(`projects.${project.key}.name`)}
                   </h3>
 
                   {/* Description */}
                   <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">
-                    {project.description}
+                    {t(`projects.${project.key}.description`)}
                   </p>
 
                   {/* Tags */}
@@ -123,7 +143,7 @@ export function LabGrid() {
                       rel="noopener noreferrer"
                       className="text-sm text-pink-600 dark:text-pink-400 font-medium hover:underline"
                     >
-                      Bekijk op GitHub →
+                      {project.link.includes("github.com") ? t("viewOnGithub") : t("viewWebsite")}
                     </a>
                   )}
                 </div>
@@ -134,10 +154,10 @@ export function LabGrid() {
           {/* CTA */}
           <motion.div variants={fadeUp} className="mt-12 text-center">
             <p className="text-stone-600 dark:text-stone-400 mb-4">
-              Idee voor een samenwerking?
+              {t("collaborationIdea")}
             </p>
             <Button href="/contact" variant="ghost">
-              Laten we praten
+              {t("letsTalk")}
             </Button>
           </motion.div>
         </motion.div>

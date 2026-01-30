@@ -1,0 +1,280 @@
+{
+  "site": {
+    "name": "Pink Pollos",
+    "description": "No onboarding theater. Senior developers and agile experts who strengthen your team from day one."
+  },
+  "nav": {
+    "deZaak": "The Business",
+    "chris": "Chris",
+    "dennis": "Dennis",
+    "friends": "Friends",
+    "lab": "The Lab",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Senior Expertise",
+    "headline1": "We build.",
+    "headline2": "We guide.",
+    "headline3": "We deliver.",
+    "subheadline": "Senior developers and agile experts who deliver value to your team from day one. No onboarding hassle, no noise — just results.",
+    "trustPoints": {
+      "seniors": "Experienced seniors",
+      "available": "Ready to deploy",
+      "proven": "Proven results"
+    },
+    "cta": {
+      "primary": "Schedule a call",
+      "secondary": "See our approach"
+    }
+  },
+  "pillars": {
+    "sectionBadge": "How we work",
+    "sectionTitle": "Three ways to deliver",
+    "sectionSubtitle": "Directly with us. Through our network. Or with tools we build ourselves.",
+    "deZaak": {
+      "title": "Ready to deploy",
+      "description": "Chris and Dennis. Two seniors who deliver without supervision. Full-stack development. Agile transformation. No agency overhead.",
+      "linkLabel": "Get to know us"
+    },
+    "friends": {
+      "title": "The inner circle",
+      "description": "Not everyone gets in. Our friends are hand-picked specialists with proven track records. When we're not available, they deliver the same quality.",
+      "linkLabel": "Meet the family"
+    },
+    "lab": {
+      "title": "Where we experiment",
+      "description": "Our own tools, products and side projects. From POC to production. Sometimes for clients, sometimes for ourselves.",
+      "linkLabel": "See the lab"
+    }
+  },
+  "proof": {
+    "sectionTitle": "Quality is no accident",
+    "noJuniors": {
+      "title": "No juniors",
+      "description": "Every consultant has at least 8 years of experience. Period."
+    },
+    "noSurprises": {
+      "title": "No surprises",
+      "description": "Fixed rates, clear communication, zero bullshit."
+    },
+    "noDrama": {
+      "title": "No drama",
+      "description": "We integrate into your team as if we've always been there."
+    },
+    "quote": "We're not an agency. We're just really good people who happen to be really good at what they do."
+  },
+  "cta": {
+    "title": "Ready to talk?",
+    "description": "No sales calls. No decks. Just an honest conversation about what you need and whether we're the right fit.",
+    "primaryButton": "Get in touch",
+    "secondaryButton": "Or email directly"
+  },
+  "contact": {
+    "badge": "Let's Talk",
+    "pageTitle": "Ready to talk?",
+    "pageSubtitle": "No sales calls. No decks. Just an honest conversation about what you need and whether we're the right fit.",
+    "pageDescription": "Contact Pink Pollos. No sales calls, just an honest conversation.",
+    "formTitle": "Direct contact",
+    "formDescription": "No contact form that disappears into a black hole. Send an email and you'll hear from us within 24 hours. Prefer to call? Leave your number.",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "you@email.com",
+      "message": "How can we help you?"
+    },
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": {
+      "title": "Message sent!",
+      "description": "We'll get back to you as soon as possible.",
+      "newMessage": "Send another message"
+    },
+    "error": "Something went wrong",
+    "responseTime": "Within 24 hours",
+    "linkedInQuestion": "Prefer LinkedIn?",
+    "orMailDirectly": "Or email directly to"
+  },
+  "footer": {
+    "tagline": "Senior expertise, neatly packaged. Development and agile consulting without the bullshit.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "meetUs": "Schedule a meeting",
+    "copyright": "Quality is no accident."
+  },
+  "profiles": {
+    "yearsExperience": "years experience",
+    "available": "available",
+    "skillsTitle": "Skills & Expertise",
+    "contactButton": "Get in touch",
+    "meetPerson": "Meet {name}",
+    "chris": {
+      "role": "Senior Full-stack Developer",
+      "alias": "The Architect",
+      "tagline": "One Man Army",
+      "badge": "Full-stack Development",
+      "pageDescription": "Senior Full-stack Developer at Pink Pollos. Builds systems that work.",
+      "subtitle": "Builds systems that work. No excuses, no drama. Just code that does what it's supposed to do.",
+      "bio": [
+        "Over 10 years of experience building scalable applications. From startup MVP to enterprise platform — Chris has built it.",
+        "Specialty: reducing complex problems to elegant solutions. No overengineering, no shortcuts. Code that works, is readable, and keeps working.",
+        "Pragmatic, direct, and allergic to bullshit. If something can't be done, you'll hear it immediately. If it can be done, it's ready tomorrow."
+      ],
+      "crossLinkQuestion": "Prefer working with a team?"
+    },
+    "dennis": {
+      "role": "Agile Coach & Team Manager",
+      "alias": "The Catalyst",
+      "tagline": "I am the one who knocks",
+      "badge": "Agile & Leadership",
+      "pageDescription": "Agile Coach and Team Manager at Pink Pollos. Makes teams better.",
+      "subtitle": "Makes teams better. No methodology drama, just results. When your team is stuck, I fix it.",
+      "bio": [
+        "Teams that are stuck, processes that don't work, organizations struggling with change — Dennis fixes it. Not with frameworks and certifications, but with common sense.",
+        "8+ years of experience guiding development teams. From chaotic startups to sluggish enterprises. The approach differs, the result doesn't: teams that deliver.",
+        "No Scrum police, no Agile theater. Just: clear communication, focus on results, and the courage to say what no one wants to hear."
+      ],
+      "crossLinkQuestion": "Prefer building yourself?"
+    }
+  },
+  "friends": {
+    "badge": "Inner Circle",
+    "pageTitle": "Friends of Pink Pollos",
+    "pageSubtitle": "Specialists we know, have worked with, and recommend without hesitation. Not an open network — only proven quality.",
+    "pageDescription": "Our inner circle of trusted specialists. Hand-picked, proven, reliable.",
+    "intro": "Selective. Personal. Proven. These are specialists we know from previous projects and recommend without reservation. When we're not available, they ensure the same quality.",
+    "available": "Available",
+    "busy": "Busy",
+    "needSomeoneElse": "Need someone who's not listed here?",
+    "tellUs": "Tell us what you're looking for →",
+    "list": {
+      "cleaner": {
+        "alias": "The Cleaner",
+        "specialty": "Legacy Code & Refactoring",
+        "description": "Turns spaghetti code into working systems. No judgment, only solutions."
+      },
+      "operator": {
+        "alias": "The Operator",
+        "specialty": "DevOps & Infrastructure",
+        "description": "Pipelines, containers, cloud. Everything that needs to run, runs."
+      },
+      "chemist": {
+        "alias": "The Chemist",
+        "specialty": "Data Engineering",
+        "description": "Transforms raw data into actionable insights. ETL is his second language."
+      },
+      "fixer": {
+        "alias": "The Fixer",
+        "specialty": "Security & Compliance",
+        "description": "Finds the holes before others do. Pentests, audits, GDPR."
+      },
+      "artist": {
+        "alias": "The Artist",
+        "specialty": "UI/UX Design",
+        "description": "Interfaces that don't just work, but feel right. Design systems specialist."
+      },
+      "professor": {
+        "alias": "The Professor",
+        "specialty": "Technical Leadership",
+        "description": "Mentors teams, designs architecture, creates technical roadmaps."
+      }
+    }
+  },
+  "lab": {
+    "badge": "R&D",
+    "pageTitle": "The Lab",
+    "pageSubtitle": "Where we experiment. Our own tools, products and side projects. Sometimes for clients, sometimes for ourselves. Always with the same standard.",
+    "pageDescription": "Our own tools, products and experiments from Pink Pollos. From POC to production.",
+    "intro": "Besides client work, we build our own tools and products. Some are serious, others are experiments. All are built with the same standard: no half measures.",
+    "status": {
+      "live": "Live",
+      "beta": "Beta",
+      "experiment": "Experiment",
+      "comingSoon": "Coming Soon"
+    },
+    "viewOnGithub": "View on GitHub →",
+    "viewWebsite": "View website →",
+    "collaborationIdea": "Have an idea for a collaboration?",
+    "letsTalk": "Let's talk",
+    "projects": {
+      "methvan": {
+        "name": "MethVan",
+        "description": "The website you're looking at right now. Our own platform built with Next.js, Tailwind and lots of love."
+      },
+      "aiIndex": {
+        "name": "AI Index Sites",
+        "description": "A series of AI-generated index sites that catalog landmarks worldwide. From lighthouses to castles, windmills and churches — each with detailed information, maps and search features."
+      },
+      "euTaxes": {
+        "name": "EU Taxes",
+        "description": "European tax calculator comparing income taxes across EU countries. Including exchange rates, country-specific info and comparison tools."
+      },
+      "movingPolygons": {
+        "name": "Moving Polygons",
+        "description": "Create animated maps showing how regions and borders change over time. Draw polygons, build timelines and share your visualizations."
+      },
+      "maelstrom": {
+        "name": "Maelstrom IT",
+        "description": "Chris's professional portfolio for CTO services, fullstack engineering and agile coaching. From strategic leadership to hands-on development."
+      },
+      "sprintPoker": {
+        "name": "Sprint Poker",
+        "description": "Real-time planning poker for remote teams. No account needed, just share a link."
+      },
+      "retroBoard": {
+        "name": "Retro Board",
+        "description": "Async retrospectives that actually work. Anonymous, structured, actionable."
+      },
+      "codeReviewBot": {
+        "name": "Code Review Bot",
+        "description": "AI-powered code reviews that are actually useful. No vague suggestions, just concrete improvements."
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Page not found",
+    "description": "This page doesn't exist or has been moved. Don't worry, even the best developers sometimes lose their way.",
+    "backHome": "Back to home",
+    "contactUs": "Contact us",
+    "orView": "Or check out:"
+  },
+  "common": {
+    "experience": "years experience",
+    "availability": "Available from"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "moreQuestions": "More questions?",
+    "contactUs": "Get in touch",
+    "items": {
+      "whatDoYouDo": {
+        "question": "What exactly do you do?",
+        "answer": "We provide senior developers and agile experts who integrate directly into your team. No trainees, no long onboarding periods. You get experienced professionals who add value to your project from day one."
+      },
+      "howFast": {
+        "question": "How quickly can you start?",
+        "answer": "Usually within 1-2 weeks. We deliberately keep capacity available for new projects. For urgent matters, we'll look together at what's possible — sometimes we can switch within a few days."
+      },
+      "rates": {
+        "question": "How do your rates work?",
+        "answer": "We work with fixed daily rates, no surprises afterwards. Rates depend on the assignment and duration. In a first conversation, we discuss what you need and what it costs."
+      },
+      "remote": {
+        "question": "Do you work remotely?",
+        "answer": "Yes, we work fully remote or hybrid, depending on what works best for your team. We're used to async communication and have set up our tooling accordingly."
+      },
+      "team": {
+        "question": "Can you provide a whole team?",
+        "answer": "Absolutely. Through our inner circle, we have access to proven specialists in various disciplines. From a complete squad to specific expertise — we arrange it."
+      },
+      "guarantee": {
+        "question": "What if it doesn't click?",
+        "answer": "Then we stop. No fuss, no long notice periods. We believe in fit, not contractual obligations. If it doesn't work, that's a waste of time for both parties."
+      }
+    }
+  }
+}
