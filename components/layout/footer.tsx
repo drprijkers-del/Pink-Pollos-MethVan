@@ -124,7 +124,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t("copyright")}
             </p>
             <p className="text-sm text-stone-500">
-              KvK 12345678 &middot; BTW NL123456789B01
+              KvK 90267370 &middot; BTW NL865260564B01
             </p>
           </div>
         </div>

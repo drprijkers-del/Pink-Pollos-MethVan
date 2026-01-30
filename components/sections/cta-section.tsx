@@ -82,7 +82,7 @@ export function CtaSection() {
                   </svg>
                 </Button>
                 <Button
-                  href="mailto:hello@pinkpollos.com"
+                  href="mailto:info@pinkpollos.com"
                   variant="ghost"
                   size="large"
                 >

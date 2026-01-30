@@ -113,7 +113,7 @@
     "meetPerson": "Möt {name}",
     "chris": {
       "role": "Senior Full-stack Utvecklare",
-      "alias": "The Architect",
+      "alias": "Mr PinkMan",
       "tagline": "One Man Army",
       "badge": "Full-stack Utveckling",
       "pageDescription": "Senior Full-stack Utvecklare hos Pink Pollos. Bygger system som fungerar.",
@@ -127,14 +127,14 @@
     },
     "dennis": {
       "role": "Agil Coach & Teamledare",
-      "alias": "The Catalyst",
+      "alias": "Mr White",
       "tagline": "I am the one who knocks",
       "badge": "Agilt & Ledarskap",
       "pageDescription": "Agil Coach och Teamledare hos Pink Pollos. Gör team bättre.",
       "subtitle": "Gör team bättre. Inget metodologi-drama, bara resultat. När ditt team kört fast löser jag det.",
       "bio": [
         "Team som kört fast, processer som inte fungerar, organisationer som kämpar med förändring — Dennis löser det. Inte med ramverk och certifieringar, utan med sunt förnuft.",
-        "8+ års erfarenhet av att leda utvecklingsteam. Från kaotiska startups till tröga företag. Tillvägagångssättet skiljer sig, resultatet gör det inte: team som levererar.",
+        "15+ års erfarenhet av att leda utvecklingsteam. Från kaotiska startups till tröga företag. Tillvägagångssättet skiljer sig, resultatet gör det inte: team som levererar.",
         "Ingen Scrum-polis, ingen Agil-teater. Bara: tydlig kommunikation, fokus på resultat och modet att säga vad ingen vill höra."
       ],
       "crossLinkQuestion": "Föredrar du att bygga själv?"

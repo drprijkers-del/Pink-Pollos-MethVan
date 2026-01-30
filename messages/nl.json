@@ -113,7 +113,7 @@
     "meetPerson": "Ontmoet {name}",
     "chris": {
       "role": "Senior Full-stack Developer",
-      "alias": "The Architect",
+      "alias": "Mr PinkMan",
       "tagline": "One Man Army",
       "badge": "Full-stack Development",
       "pageDescription": "Senior Full-stack Developer bij Pink Pollos. Bouwt systemen die werken.",
@@ -127,14 +127,14 @@
     },
     "dennis": {
       "role": "Agile Coach & Team Manager",
-      "alias": "The Catalyst",
+      "alias": "Mr White",
       "tagline": "I am the one who knocks",
       "badge": "Agile & Leadership",
       "pageDescription": "Agile Coach en Team Manager bij Pink Pollos. Maakt teams beter.",
       "subtitle": "Maakt teams beter. Geen methodologie-gedram, wel resultaat. Als je team vastzit, los ik het op.",
       "bio": [
         "Teams die vastlopen, processen die niet werken, organisaties die worstelen met verandering — Dennis lost het op. Niet met frameworks en certifications, maar met gezond verstand.",
-        "8+ jaar ervaring in het begeleiden van development teams. Van chaotische startups tot logge enterprises. De aanpak verschilt, het resultaat niet: teams die leveren.",
+        "15+ jaar ervaring in het begeleiden van development teams. Van chaotische startups tot logge enterprises. De aanpak verschilt, het resultaat niet: teams die leveren.",
         "Geen Scrum-politie, geen Agile-theater. Wel: heldere communicatie, focus op resultaat, en de moed om te zeggen wat niemand wil horen."
       ],
       "crossLinkQuestion": "Liever zelf bouwen?"
