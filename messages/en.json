@@ -113,7 +113,7 @@
     "meetPerson": "Meet {name}",
     "chris": {
       "role": "Senior Full-stack Developer",
-      "alias": "The Architect",
+      "alias": "Mr PinkMan",
       "tagline": "One Man Army",
       "badge": "Full-stack Development",
       "pageDescription": "Senior Full-stack Developer at Pink Pollos. Builds systems that work.",
@@ -127,14 +127,14 @@
     },
     "dennis": {
       "role": "Agile Coach & Team Manager",
-      "alias": "The Catalyst",
+      "alias": "Mr White",
       "tagline": "I am the one who knocks",
       "badge": "Agile & Leadership",
       "pageDescription": "Agile Coach and Team Manager at Pink Pollos. Makes teams better.",
       "subtitle": "Makes teams better. No methodology drama, just results. When your team is stuck, I fix it.",
       "bio": [
         "Teams that are stuck, processes that don't work, organizations struggling with change — Dennis fixes it. Not with frameworks and certifications, but with common sense.",
-        "8+ years of experience guiding development teams. From chaotic startups to sluggish enterprises. The approach differs, the result doesn't: teams that deliver.",
+        "15+ years of experience guiding development teams. From chaotic startups to sluggish enterprises. The approach differs, the result doesn't: teams that deliver.",
         "No Scrum police, no Agile theater. Just: clear communication, focus on results, and the courage to say what no one wants to hear."
       ],
       "crossLinkQuestion": "Prefer building yourself?"
