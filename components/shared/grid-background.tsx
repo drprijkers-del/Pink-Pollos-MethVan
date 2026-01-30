@@ -75,19 +75,6 @@ export function GridBackground() {
           animate={{ pathLength: 1 }}
           transition={{ duration: 1.5, delay: 0.8 }}
         />
-        {/* Vertical accent */}
-        <motion.line
-          x1="60%"
-          y1="100%"
-          x2="60%"
-          y2="40%"
-          stroke="#ec4899"
-          strokeWidth="1"
-          strokeOpacity="0.1"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1.2, delay: 1 }}
-        />
       </svg>
 
       {/* Corner accents */}

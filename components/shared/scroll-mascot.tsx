@@ -117,7 +117,7 @@ export function ScrollMascotPeek() {
 
   return (
     <motion.div
-      className="fixed bottom-24 right-0 z-40 pointer-events-none select-none hidden lg:block"
+      className="fixed bottom-20 md:bottom-24 right-0 z-40 pointer-events-none select-none"
       style={{
         opacity,
         x,
@@ -135,7 +135,7 @@ export function ScrollMascotPeek() {
           alt="Pink Pollos mascot"
           width={200}
           height={200}
-          className="relative w-36 h-36 md:w-44 md:h-44 xl:w-52 xl:h-52 object-contain"
+          className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 xl:w-52 xl:h-52 object-contain"
           style={{
             filter: "drop-shadow(0 10px 20px rgb(0 0 0 / 0.2)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.15))"
           }}
