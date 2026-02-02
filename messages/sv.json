@@ -231,6 +231,10 @@
       "codeReviewBot": {
         "name": "Code Review Bot",
         "description": "AI-drivna kodgranskningar som faktiskt är användbara. Inga vaga förslag, bara konkreta förbättringar."
+      },
+      "bliply": {
+        "name": "Bliply",
+        "description": "En plattform som skapar personliga CV-webbplatser och ansökningshandlingar anpassade för varje jobbansökan, så att yrkesverksamma kan upprätthålla en huvudprofil och skapa jobbspecifika varianter."
       }
     }
   },

@@ -46,6 +46,12 @@ const projectsConfig: ProjectConfig[] = [
     link: "https://maelstromit.com",
   },
   {
+    key: "bliply",
+    status: "live",
+    tags: ["AI", "SaaS", "CV Tools"],
+    link: "https://bliply.eu",
+  },
+  {
     key: "sprintPoker",
     status: "experiment",
     tags: ["WebSockets", "React", "Real-time"],

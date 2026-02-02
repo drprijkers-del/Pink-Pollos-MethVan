@@ -15,7 +15,10 @@
       "Bash(npm ls:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "WebFetch(domain:bliply.eu)",
+      "WebFetch(domain:www.bliply.eu)",
+      "Bash(git reset:*)"
     ]
   }
 }
