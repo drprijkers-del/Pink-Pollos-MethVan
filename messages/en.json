@@ -231,6 +231,10 @@
       "codeReviewBot": {
         "name": "Code Review Bot",
         "description": "AI-powered code reviews that are actually useful. No vague suggestions, just concrete improvements."
+      },
+      "bliply": {
+        "name": "Bliply",
+        "description": "A platform that generates personalized resume websites and CVs tailored for each job application, allowing professionals to maintain one master profile while creating job-specific variants."
       }
     }
   },
