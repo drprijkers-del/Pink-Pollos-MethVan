@@ -235,6 +235,14 @@
       "bliply": {
         "name": "Bliply",
         "description": "A platform that generates personalized resume websites and CVs tailored for each job application, allowing professionals to maintain one master profile while creating job-specific variants."
+      },
+      "coreView": {
+        "name": "Core-View",
+        "description": "A 12-minute personality assessment that goes deeper than Myers-Briggs. Discover your authentic core beneath learned behaviors — no account needed."
+      },
+      "isNietGrappig": {
+        "name": "Is Niet Grappig",
+        "description": "A collection of humorous websites that generate 'scientific proof'. From isnietgrappig.com to heefthonger.horse, gaeenswerken.dog and more — same nonsense, different domain each time."
       }
     }
   },

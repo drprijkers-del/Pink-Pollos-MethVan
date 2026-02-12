@@ -235,6 +235,14 @@
       "bliply": {
         "name": "Bliply",
         "description": "En plattform som skapar personliga CV-webbplatser och ansökningshandlingar anpassade för varje jobbansökan, så att yrkesverksamma kan upprätthålla en huvudprofil och skapa jobbspecifika varianter."
+      },
+      "coreView": {
+        "name": "Core-View",
+        "description": "Ett 12-minuters personlighetstest som går djupare än Myers-Briggs. Upptäck din autentiska kärna under inlärda beteenden — inget konto behövs."
+      },
+      "isNietGrappig": {
+        "name": "Is Niet Grappig",
+        "description": "En samling humoristiska webbplatser som genererar 'vetenskapliga bevis'. Från isnietgrappig.com till heefthonger.horse, gaeenswerken.dog och mer — samma nonsens, olika domän varje gång."
       }
     }
   },
