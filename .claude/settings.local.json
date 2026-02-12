@@ -18,7 +18,13 @@
       "Bash(npm run lint)",
       "WebFetch(domain:bliply.eu)",
       "WebFetch(domain:www.bliply.eu)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:www.core-view.app)",
+      "WebFetch(domain:isnietgrappig.com)",
+      "Bash(curl:*)",
+      "Bash(npx next lint)",
+      "Bash(npx next build:*)"
     ]
   }
 }

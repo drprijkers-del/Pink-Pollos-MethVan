@@ -235,6 +235,14 @@
       "bliply": {
         "name": "Bliply",
         "description": "Een platform dat persoonlijke cv-websites en sollicitatiestukken maakt die zijn afgestemd op elke vacature, zodat professionals één hoofdprofiel kunnen beheren en taakgerichte varianten kunnen creëren."
+      },
+      "coreView": {
+        "name": "Core-View",
+        "description": "Een persoonlijkheidstest van 12 minuten die dieper gaat dan Myers-Briggs. Ontdek je authentieke kern onder aangeleerd gedrag — geen account nodig."
+      },
+      "isNietGrappig": {
+        "name": "Is Niet Grappig",
+        "description": "Een verzameling humoristische websites die 'wetenschappelijk bewijs' genereren. Van isnietgrappig.com tot heefthonger.horse, gaeenswerken.dog en meer — allemaal dezelfde onzin, steeds een ander domein."
       }
     }
   },

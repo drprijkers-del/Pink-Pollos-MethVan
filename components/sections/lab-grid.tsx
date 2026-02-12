@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
@@ -12,6 +13,7 @@ type ProjectConfig = {
   status: "live" | "beta" | "experiment" | "coming-soon";
   tags: string[];
   link?: string;
+  image?: string;
 };
 
 const projectsConfig: ProjectConfig[] = [
@@ -66,6 +68,20 @@ const projectsConfig: ProjectConfig[] = [
     status: "experiment",
     tags: ["AI", "GitHub", "Developer Tools"],
   },
+  {
+    key: "coreView",
+    status: "live",
+    tags: ["React", "Personality", "Assessment"],
+    link: "https://core-view.app",
+    image: "/images/lab/core-view.png",
+  },
+  {
+    key: "isNietGrappig",
+    status: "live",
+    tags: ["Humor", "Fun", "Multi-domain"],
+    link: "https://isnietgrappig.com",
+    image: "/images/lab/isnietgrappig.png",
+  },
 ];
 
 const statusColors = {
@@ -108,9 +124,22 @@ export function LabGrid() {
                 whileHover={{ y: -4 }}
                 className="group relative"
               >
-                <div className="relative h-full rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 p-6 overflow-hidden transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/5">
+                <div className="relative h-full rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 overflow-hidden transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/5">
                   <CornerAccent position="top-right" className="opacity-0 group-hover:opacity-100 transition-opacity" />
 
+                  {/* Screenshot */}
+                  {project.image && (
+                    <div className="relative w-full h-40 bg-stone-100 dark:bg-stone-900">
+                      <Image
+                        src={project.image}
+                        alt={t(`projects.${project.key}.name`)}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  )}
+
+                  <div className="p-6">
                   {/* Status badge */}
                   <div className="flex items-center gap-2 mb-4">
                     <span className={`w-2 h-2 rounded-full ${statusColors[project.status]}`} />
@@ -152,6 +181,7 @@ export function LabGrid() {
                       {project.link.includes("github.com") ? t("viewOnGithub") : t("viewWebsite")}
                     </a>
                   )}
+                  </div>
                 </div>
               </motion.div>
             ))}
