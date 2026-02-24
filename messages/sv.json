@@ -243,6 +243,14 @@
       "isNietGrappig": {
         "name": "Is Niet Grappig",
         "description": "En samling humoristiska webbplatser som genererar 'vetenskapliga bevis'. Från isnietgrappig.com till heefthonger.horse, gaeenswerken.dog och mer — samma nonsens, olika domän varje gång."
+      },
+      "dgaVermogensplanner": {
+        "name": "DGA Förmögenhetsplanerare",
+        "description": "Finansiellt planeringsverktyg för holländska företagsägare (DGA). Simulera förmögenhetstillväxt via BV, pension och privat sparande, och beräkna inkomst till 100 års ålder — baserat på 2026 skattesatser."
+      },
+      "brainQuest": {
+        "name": "BrainQuest",
+        "description": "Interaktivt utbildningsverktyg som berättar historien om hjärnans evolution i 5 genombrott. Med simuleringar, tidslinjer och experiment — designat för 11-14 åringar."
       }
     }
   },

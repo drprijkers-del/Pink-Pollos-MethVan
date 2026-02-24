@@ -22,36 +22,42 @@ const projectsConfig: ProjectConfig[] = [
     status: "beta",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     link: "https://github.com/drprijkers-del/Pink-Pollos-MethVan",
+    image: "/images/lab/methvan.png",
   },
   {
     key: "aiIndex",
     status: "live",
     tags: ["AI", "OpenStreetMap", "Next.js"],
     link: "https://lighthouse-index.com",
+    image: "/images/lab/ai-index.png",
   },
   {
     key: "euTaxes",
     status: "live",
     tags: ["React", "Finance", "EU"],
     link: "https://eutaxes.app",
+    image: "/images/lab/eu-taxes.png",
   },
   {
     key: "movingPolygons",
     status: "live",
     tags: ["Maps", "Animation", "GIS"],
     link: "https://movingpolygons.com",
+    image: "/images/lab/moving-polygons.png",
   },
   {
     key: "maelstrom",
     status: "live",
     tags: ["Portfolio", "Consulting", "Tech Leadership"],
     link: "https://maelstromit.com",
+    image: "/images/lab/maelstrom.png",
   },
   {
     key: "bliply",
     status: "live",
     tags: ["AI", "SaaS", "CV Tools"],
     link: "https://bliply.eu",
+    image: "/images/lab/bliply.png",
   },
   {
     key: "sprintPoker",
@@ -81,6 +87,20 @@ const projectsConfig: ProjectConfig[] = [
     tags: ["Humor", "Fun", "Multi-domain"],
     link: "https://isnietgrappig.com",
     image: "/images/lab/isnietgrappig.png",
+  },
+  {
+    key: "dgaVermogensplanner",
+    status: "live",
+    tags: ["React", "Finance", "DGA"],
+    link: "https://dga-vermogensplanner.pinkpollos.com",
+    image: "/images/lab/dga-vermogensplanner.png",
+  },
+  {
+    key: "brainQuest",
+    status: "live",
+    tags: ["React", "Education", "Neuroscience"],
+    link: "https://brain-quest.pinkpollos.com",
+    image: "/images/lab/brain-quest.png",
   },
 ];
 
