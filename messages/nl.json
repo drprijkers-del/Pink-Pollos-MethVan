@@ -243,6 +243,14 @@
       "isNietGrappig": {
         "name": "Is Niet Grappig",
         "description": "Een verzameling humoristische websites die 'wetenschappelijk bewijs' genereren. Van isnietgrappig.com tot heefthonger.horse, gaeenswerken.dog en meer — allemaal dezelfde onzin, steeds een ander domein."
+      },
+      "dgaVermogensplanner": {
+        "name": "DGA Vermogensplanner",
+        "description": "Financiële planningstool voor DGA's. Simuleer vermogensopbouw via BV, pensioen en privé, en bereken je inkomen tot je 100ste — op basis van belastingtarieven 2026."
+      },
+      "brainQuest": {
+        "name": "BrainQuest",
+        "description": "Interactieve educatieve tool die de evolutie van het menselijk brein vertelt in 5 doorbraken. Met simulaties, tijdlijnen en experimenten — voor 11-14 jarigen."
       }
     }
   },

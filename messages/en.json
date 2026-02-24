@@ -243,6 +243,14 @@
       "isNietGrappig": {
         "name": "Is Niet Grappig",
         "description": "A collection of humorous websites that generate 'scientific proof'. From isnietgrappig.com to heefthonger.horse, gaeenswerken.dog and more — same nonsense, different domain each time."
+      },
+      "dgaVermogensplanner": {
+        "name": "DGA Wealth Planner",
+        "description": "Financial planning tool for Dutch business owners (DGA). Simulate wealth growth across BV, pension and private savings, and calculate income until age 100 — based on 2026 tax rates."
+      },
+      "brainQuest": {
+        "name": "BrainQuest",
+        "description": "Interactive educational tool that tells the story of human brain evolution in 5 breakthroughs. With simulations, timelines and experiments — designed for ages 11-14."
       }
     }
   },
