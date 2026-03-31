@@ -26,7 +26,12 @@
       "Bash(npx next lint)",
       "Bash(npx next build:*)",
       "WebFetch(domain:dga-vermogensplanner.pinkpollos.com)",
-      "WebFetch(domain:brain-quest.pinkpollos.com)"
+      "WebFetch(domain:brain-quest.pinkpollos.com)",
+      "WebFetch(domain:aurora.pinkpollos.com)",
+      "WebFetch(domain:weather.pinkpollos.com)",
+      "WebFetch(domain:tafels-leren.pinkpollos.com)",
+      "Bash(npx --yes puppeteer --version)",
+      "Bash(node -e \":*)"
     ]
   }
 }

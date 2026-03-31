@@ -251,6 +251,18 @@
       "brainQuest": {
         "name": "BrainQuest",
         "description": "Interactive educational tool that tells the story of human brain evolution in 5 breakthroughs. With simulations, timelines and experiments — designed for ages 11-14."
+      },
+      "auroraNow": {
+        "name": "Aurora Now",
+        "description": "Real-time Northern Lights forecasting based on solar activity and weather conditions. With activity timelines, cloud cover data and multi-day forecasts."
+      },
+      "pastWeather": {
+        "name": "Past Weather",
+        "description": "Travel through time and discover the weather of any day, at any location. Search historical weather data by city and date."
+      },
+      "tafelsLeren": {
+        "name": "Tafels Leren",
+        "description": "Interactive app to practice multiplication tables. Move your body and learn your tables — gamification for kids."
       }
     }
   },

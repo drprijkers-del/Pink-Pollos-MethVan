@@ -102,6 +102,27 @@ const projectsConfig: ProjectConfig[] = [
     link: "https://brain-quest.pinkpollos.com",
     image: "/images/lab/brain-quest.png",
   },
+  {
+    key: "auroraNow",
+    status: "live",
+    tags: ["React", "NOAA", "Weather", "Data Viz"],
+    link: "https://aurora.pinkpollos.com",
+    image: "/images/lab/aurora.png",
+  },
+  {
+    key: "pastWeather",
+    status: "live",
+    tags: ["React", "Open-Meteo", "Weather"],
+    link: "https://weather.pinkpollos.com",
+    image: "/images/lab/weather.png",
+  },
+  {
+    key: "tafelsLeren",
+    status: "live",
+    tags: ["React", "Education", "Gamification"],
+    link: "https://tafels-leren.pinkpollos.com",
+    image: "/images/lab/tafels-leren.png",
+  },
 ];
 
 const statusColors = {

@@ -251,6 +251,18 @@
       "brainQuest": {
         "name": "BrainQuest",
         "description": "Interactieve educatieve tool die de evolutie van het menselijk brein vertelt in 5 doorbraken. Met simulaties, tijdlijnen en experimenten — voor 11-14 jarigen."
+      },
+      "auroraNow": {
+        "name": "Aurora Now",
+        "description": "Real-time noorderlichtvoorspellingen op basis van zonne-activiteit en weersomstandigheden. Met activiteitstijdlijnen, wolkendekking en meerdaagse forecasts."
+      },
+      "pastWeather": {
+        "name": "Past Weather",
+        "description": "Reis door de tijd en ontdek het weer van elke dag, op elke locatie. Zoek historische weerdata op per stad en datum."
+      },
+      "tafelsLeren": {
+        "name": "Tafels Leren",
+        "description": "Interactieve app om de tafels van vermenigvuldiging te oefenen. Beweeg je lichaam en leer de tafels — gamification voor kinderen."
       }
     }
   },
