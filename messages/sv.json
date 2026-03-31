@@ -251,6 +251,18 @@
       "brainQuest": {
         "name": "BrainQuest",
         "description": "Interaktivt utbildningsverktyg som berättar historien om hjärnans evolution i 5 genombrott. Med simuleringar, tidslinjer och experiment — designat för 11-14 åringar."
+      },
+      "auroraNow": {
+        "name": "Aurora Now",
+        "description": "Norrskensprognoser i realtid baserade på solaktivitet och väderförhållanden. Med aktivitetstidslinjer, molntäckningsdata och flerdagsprognoser."
+      },
+      "pastWeather": {
+        "name": "Past Weather",
+        "description": "Res genom tiden och upptäck vädret för vilken dag som helst, på vilken plats som helst. Sök historisk väderdata per stad och datum."
+      },
+      "tafelsLeren": {
+        "name": "Tafels Leren",
+        "description": "Interaktiv app för att öva multiplikationstabeller. Rör din kropp och lär dig tabellerna — spelifiering för barn."
       }
     }
   },
