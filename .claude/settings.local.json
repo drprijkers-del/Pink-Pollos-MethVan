@@ -31,7 +31,10 @@
       "WebFetch(domain:weather.pinkpollos.com)",
       "WebFetch(domain:tafels-leren.pinkpollos.com)",
       "Bash(npx --yes puppeteer --version)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "WebFetch(domain:transport-footprint.pinkpollos.com)",
+      "WebFetch(domain:language-analyzer.pinkpollos.com)",
+      "Bash(node -e ' *)"
     ]
   }
 }

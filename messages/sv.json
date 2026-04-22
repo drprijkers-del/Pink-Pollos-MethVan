@@ -263,6 +263,14 @@
       "tafelsLeren": {
         "name": "Tafels Leren",
         "description": "Interaktiv app för att öva multiplikationstabeller. Rör din kropp och lär dig tabellerna — spelifiering för barn."
+      },
+      "transportFootprint": {
+        "name": "Travel Compare",
+        "description": "Jämför CO₂-utsläpp, kostnad och restid för olika transportsätt mellan två platser. Gör medvetna val — baserat på verklig data."
+      },
+      "languageAnalyzer": {
+        "name": "Language Analyzer",
+        "description": "Interaktiv världskarta som visar de officiella språken i varje land. Utforska språkfamiljer och språklig spridning över hela världen."
       }
     }
   },
