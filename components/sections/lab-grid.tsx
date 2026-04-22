@@ -123,6 +123,20 @@ const projectsConfig: ProjectConfig[] = [
     link: "https://tafels-leren.pinkpollos.com",
     image: "/images/lab/tafels-leren.png",
   },
+  {
+    key: "transportFootprint",
+    status: "live",
+    tags: ["React", "Climate", "Data Viz"],
+    link: "https://transport-footprint.pinkpollos.com",
+    image: "/images/lab/transport-footprint.png",
+  },
+  {
+    key: "languageAnalyzer",
+    status: "live",
+    tags: ["React", "Leaflet", "Linguistics"],
+    link: "https://language-analyzer.pinkpollos.com",
+    image: "/images/lab/language-analyzer.png",
+  },
 ];
 
 const statusColors = {

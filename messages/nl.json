@@ -263,6 +263,14 @@
       "tafelsLeren": {
         "name": "Tafels Leren",
         "description": "Interactieve app om de tafels van vermenigvuldiging te oefenen. Beweeg je lichaam en leer de tafels — gamification voor kinderen."
+      },
+      "transportFootprint": {
+        "name": "Travel Compare",
+        "description": "Vergelijk CO₂-uitstoot, kosten en reistijd van verschillende vervoersmiddelen tussen twee locaties. Maak bewuste keuzes — op basis van echte data."
+      },
+      "languageAnalyzer": {
+        "name": "Language Analyzer",
+        "description": "Interactieve wereldkaart met de officiële talen van alle landen. Verken taalfamilies en linguïstische verspreiding wereldwijd."
       }
     }
   },

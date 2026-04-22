@@ -263,6 +263,14 @@
       "tafelsLeren": {
         "name": "Tafels Leren",
         "description": "Interactive app to practice multiplication tables. Move your body and learn your tables — gamification for kids."
+      },
+      "transportFootprint": {
+        "name": "Travel Compare",
+        "description": "Compare CO₂ emissions, cost and travel time across different transport modes between two locations. Make conscious choices — based on real data."
+      },
+      "languageAnalyzer": {
+        "name": "Language Analyzer",
+        "description": "Interactive world map showing the official languages of every country. Explore language families and linguistic distribution across the globe."
       }
     }
   },
