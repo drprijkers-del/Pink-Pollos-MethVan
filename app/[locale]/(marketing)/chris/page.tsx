@@ -31,8 +31,7 @@ export default async function ChrisPage() {
     tagline: t("tagline"),
     bio: [t("bio.0"), t("bio.1"), t("bio.2")],
     skills,
-    experience: "10+",
-    availability: "Q2 2025",
+    experience: "15+",
     crossLink: {
       question: t("crossLinkQuestion"),
       name: "Dennis",

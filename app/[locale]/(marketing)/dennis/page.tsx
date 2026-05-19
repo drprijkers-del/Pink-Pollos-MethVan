@@ -32,7 +32,6 @@ export default async function DennisPage() {
     bio: [t("bio.0"), t("bio.1"), t("bio.2")],
     skills,
     experience: "15+",
-    availability: "Direct",
     crossLink: {
       question: t("crossLinkQuestion"),
       name: "Chris",
