@@ -271,6 +271,14 @@
       "languageAnalyzer": {
         "name": "Language Analyzer",
         "description": "Interaktiv världskarta som visar de officiella språken i varje land. Utforska språkfamiljer och språklig spridning över hela världen."
+      },
+      "carCompare": {
+        "name": "Car Compare",
+        "description": "Jämför bilar sida vid sida på specifikationer, pris och funktioner. Fatta smartare köpbeslut med tydliga, datadrivna översikter."
+      },
+      "pfasLocations": {
+        "name": "PFAS-platser",
+        "description": "Interaktiv karta över kända PFAS-föroreningsplatser. Utforska var 'evighetskemikalier' har upptäckts och förstå lokal exponering."
       }
     }
   },
