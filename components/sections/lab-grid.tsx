@@ -137,6 +137,20 @@ const projectsConfig: ProjectConfig[] = [
     link: "https://language-analyzer.pinkpollos.com",
     image: "/images/lab/language-analyzer.png",
   },
+  {
+    key: "carCompare",
+    status: "live",
+    tags: ["React", "Automotive", "Comparison"],
+    link: "https://car-compare.pinkpollos.com",
+    image: "/images/lab/car-compare.png",
+  },
+  {
+    key: "pfasLocations",
+    status: "live",
+    tags: ["React", "Leaflet", "Environment"],
+    link: "https://pfas-locations.pinkpollos.com",
+    image: "/images/lab/pfas-locations.png",
+  },
 ];
 
 const statusColors = {

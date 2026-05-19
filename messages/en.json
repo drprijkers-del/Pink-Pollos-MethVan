@@ -271,6 +271,14 @@
       "languageAnalyzer": {
         "name": "Language Analyzer",
         "description": "Interactive world map showing the official languages of every country. Explore language families and linguistic distribution across the globe."
+      },
+      "carCompare": {
+        "name": "Car Compare",
+        "description": "Compare cars side by side on specs, price and features. Make smarter buying decisions with clear, data-driven overviews."
+      },
+      "pfasLocations": {
+        "name": "PFAS Locations",
+        "description": "Interactive map of known PFAS contamination sites. Explore where forever chemicals have been detected and understand local exposure."
       }
     }
   },

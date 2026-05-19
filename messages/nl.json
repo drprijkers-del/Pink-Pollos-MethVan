@@ -271,6 +271,14 @@
       "languageAnalyzer": {
         "name": "Language Analyzer",
         "description": "Interactieve wereldkaart met de officiële talen van alle landen. Verken taalfamilies en linguïstische verspreiding wereldwijd."
+      },
+      "carCompare": {
+        "name": "Car Compare",
+        "description": "Vergelijk auto's naast elkaar op specs, prijs en features. Maak slimmere keuzes met heldere, data-gedreven overzichten."
+      },
+      "pfasLocations": {
+        "name": "PFAS Locaties",
+        "description": "Interactieve kaart van bekende PFAS-vervuilingslocaties. Ontdek waar 'forever chemicals' zijn aangetroffen en begrijp de lokale blootstelling."
       }
     }
   },
