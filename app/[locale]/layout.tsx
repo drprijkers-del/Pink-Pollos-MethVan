@@ -7,6 +7,7 @@ import { locales, type Locale } from "@/i18n/config";
 import { PostHogProvider } from "@/components/providers/posthog-provider";
 import { CookieBanner } from "@/components/shared/cookie-banner";
 import { OrganizationJsonLd } from "@/components/shared/json-ld";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -109,6 +110,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <CookieBanner />
           </PostHogProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
