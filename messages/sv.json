@@ -279,6 +279,18 @@
       "pfasLocations": {
         "name": "PFAS-platser",
         "description": "Interaktiv karta över kända PFAS-föroreningsplatser. Utforska var 'evighetskemikalier' har upptäckts och förstå lokal exponering."
+      },
+      "atomica": {
+        "name": "Atomica",
+        "description": "Bygg molekyler genom att dra och binda atomer. Lär dig om oktettregler och bindningar — från O₂ till komplexa föreningar. Pedagogisk kemi direkt i webbläsaren."
+      },
+      "countryBucketlist": {
+        "name": "Country Bucketlist",
+        "description": "Interaktiv världskarta för att hålla koll på vilka länder du har besökt och vilka som fortfarande står på din önskelista. Samla flaggor och utforska världen."
+      },
+      "findCities": {
+        "name": "Find Cities",
+        "description": "Geografispel där du hittar städer runt om i världen på kartan. Ju närmare och snabbare du klickar, desto fler poäng — från Dusjanbe till Tokyo."
       }
     }
   },

@@ -279,6 +279,18 @@
       "pfasLocations": {
         "name": "PFAS Locaties",
         "description": "Interactieve kaart van bekende PFAS-vervuilingslocaties. Ontdek waar 'forever chemicals' zijn aangetroffen en begrijp de lokale blootstelling."
+      },
+      "atomica": {
+        "name": "Atomica",
+        "description": "Bouw moleculen door atomen te slepen en te verbinden. Leer over octetregels en bindingen — van O₂ tot complexe verbindingen. Educatieve scheikunde in de browser."
+      },
+      "countryBucketlist": {
+        "name": "Country Bucketlist",
+        "description": "Interactieve wereldkaart waarop je bijhoudt welke landen je hebt bezocht en welke nog op je bucketlist staan. Verzamel vlaggen en ontdek de wereld."
+      },
+      "findCities": {
+        "name": "Find Cities",
+        "description": "Geografiespel waarin je steden wereldwijd op de kaart moet vinden. Hoe dichterbij en sneller je klikt, hoe meer punten — van Dushanbe tot Tokio."
       }
     }
   },

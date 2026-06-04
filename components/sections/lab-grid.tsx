@@ -151,6 +151,27 @@ const projectsConfig: ProjectConfig[] = [
     link: "https://pfas-locations.pinkpollos.com",
     image: "/images/lab/pfas-locations.png",
   },
+  {
+    key: "atomica",
+    status: "live",
+    tags: ["React", "Education", "Chemistry"],
+    link: "https://atomica.pinkpollos.com",
+    image: "/images/lab/atomica.png",
+  },
+  {
+    key: "countryBucketlist",
+    status: "live",
+    tags: ["React", "Travel", "Geography"],
+    link: "https://country-bucketlist.mslabs.tech",
+    image: "/images/lab/country-bucketlist.png",
+  },
+  {
+    key: "findCities",
+    status: "live",
+    tags: ["React", "Leaflet", "Geography", "Game"],
+    link: "https://find-cities.mslabs.tech",
+    image: "/images/lab/find-cities.png",
+  },
 ];
 
 const statusColors = {

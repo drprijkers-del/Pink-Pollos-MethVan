@@ -279,6 +279,18 @@
       "pfasLocations": {
         "name": "PFAS Locations",
         "description": "Interactive map of known PFAS contamination sites. Explore where forever chemicals have been detected and understand local exposure."
+      },
+      "atomica": {
+        "name": "Atomica",
+        "description": "Build molecules by dragging and bonding atoms. Learn about octet rules and bonds — from O₂ to complex compounds. Educational chemistry right in the browser."
+      },
+      "countryBucketlist": {
+        "name": "Country Bucketlist",
+        "description": "Interactive world map to track which countries you've visited and which are still on your bucket list. Collect flags and explore the world."
+      },
+      "findCities": {
+        "name": "Find Cities",
+        "description": "Geography game where you locate cities around the world on the map. The closer and faster you click, the more points — from Dushanbe to Tokyo."
       }
     }
   },
